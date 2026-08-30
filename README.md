@@ -155,12 +155,45 @@ See [RULES.md](./RULES.md)
 
 ---
 
-## Adding New Agents
+## Adding New Agents — MANDATORY STRUCTURE
 
-1. Create a folder inside `agent/` named after the agent (lowercase, no spaces)
-2. Include: `README.md`, source code (for Python agents), or prompt file (for prompt agents)
-3. Update this root README with agent details
-4. Follow the rules in `RULES.md`
+All new agents **MUST** follow this structure. No exceptions.
+
+### Step 1: Create folder
+```bash
+mkdir agent/[name]
+```
+
+### Step 2: Create ALL required files
+
+**For Python agents:**
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Personality, tone, communication style
+├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
+├── [name]-learning.md     # Distillation process, what it learns, storage
+├── src/[name]/            # Source code
+├── tests/                 # Test files
+├── .env.example           # Required environment variables
+└── pyproject.toml         # Dependencies and config
+```
+
+**For Prompt agents:**
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Personality, tone, communication style
+├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
+├── [name]-learning.md     # Distillation process, what it learns, storage
+└── [name].md              # Agent prompt file
+```
+
+### Step 3: Update root README
+Add agent to the Agents Overview table.
+
+### Step 4: Follow RULES.md
+All rules in [RULES.md](./RULES.md) apply.
 
 ---
 
@@ -168,19 +201,32 @@ See [RULES.md](./RULES.md)
 
 ```
 agents/
-├── README.md              # This file
-├── RULES.md               # Hard rules for all agents
-├── session_loader.py      # Main entry point
+├── README.md                  # This file
+├── RULES.md                   # Hard rules for all agents
+├── session_loader.py          # Main entry point
 └── agent/
-    ├── valeri/            # Orchestrator agent (Python)
+    ├── valeri/                # Orchestrator agent (Python)
     │   ├── README.md
+    │   ├── voice.md
+    │   ├── valeri-charter.md
+    │   ├── valeri-learning.md
     │   ├── src/valeri/
     │   ├── tests/
-    │   └── ...
-    ├── jouli/             # Translator agent (Python)
+    │   ├── .env.example
+    │   └── pyproject.toml
+    ├── jouli/                 # Translator agent (Python)
     │   ├── README.md
+    │   ├── voice.md
+    │   ├── jouli-charter.md
+    │   ├── jouli-learning.md
     │   ├── src/jouli/
     │   ├── tests/
-    │   └── ...
-    └── omar-hayam.md      # Scenario writer (Prompt)
+    │   ├── .env.example
+    │   └── pyproject.toml
+    └── omar-hayam/            # Scenario writer (Prompt)
+        ├── README.md
+        ├── voice.md
+        ├── omar-charter.md
+        ├── omar-learning.md
+        └── omar-hayam.md
 ```

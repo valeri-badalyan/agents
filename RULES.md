@@ -18,15 +18,35 @@ These rules apply to **ALL agents** in this repository. No exceptions.
 7. **Tests must be isolated** — No external API calls in tests (mock everything)
 8. **Tests must pass before commit** — Run `pytest` before pushing
 
-## Structure
+## Structure — MANDATORY
 
-9. **Each agent in its own folder** — Named after the agent (lowercase)
-10. **Each agent folder must have:**
-    - `README.md` — Role, knowledge, paths, learning, memory, charter
-    - `src/` — Source code
-    - `tests/` — Test files
-    - `.env.example` — Required environment variables
-    - `pyproject.toml` — Dependencies and config
+9. **Each agent MUST be in `agent/` folder** — Named after the agent (lowercase, no spaces)
+10. **Each agent folder MUST have these exact files:**
+
+### For Python Agents:
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Agent personality and communication style
+├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
+├── [name]-learning.md     # Distillation process, what it learns, storage
+├── src/[name]/            # Source code
+├── tests/                 # Test files
+├── .env.example           # Required environment variables
+└── pyproject.toml         # Dependencies and config
+```
+
+### For Prompt Agents:
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Agent personality and communication style
+├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
+├── [name]-learning.md     # Distillation process, what it learns, storage
+└── [name].md              # Agent prompt file
+```
+
+11. **ALL files are mandatory** — No exceptions. New agents must include every file listed above.
 
 ## Documentation
 
