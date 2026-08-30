@@ -25,6 +25,7 @@ python session_loader.py
 |-------|------|--------|
 | [Valeri](./valeri/) | Orchestrator — Coordinates all agents | Active |
 | [Jouli](./jouli/) | Natural Language Translator | Active |
+| [Omar Hayam](./agent/omar-hayam.md) | Scenario Writer — Stories, narratives, games, films | Active |
 
 ---
 
@@ -92,6 +93,40 @@ python session_loader.py
 
 ---
 
+## Omar Hayam — Scenario Writer Agent
+
+**Role:** Creates storylines, narratives, and scenarios for games and films
+
+**Knowledge:**
+- Narrative design: story structure, plot arcs, pacing, tension curves
+- Character development: backstories, motivations, relationships, arcs
+- World-building: settings, lore, rules of the universe, atmosphere
+- Dialogue: natural, character-specific speech patterns and subtext
+- Game scenarios: branching narratives, player agency, quest design
+- Film scenarios: three-act structure, visual storytelling, scene composition
+
+**Paths:**
+- Prompt: `agent/omar-hayam.md`
+
+**Learning (Distillation):**
+- Learns genre preferences and tone from feedback
+- Adapts character voices based on user corrections
+- Improves pacing and structure over time
+
+**Memory (Distillation):**
+- Stores style preferences (genre, tone, pacing)
+- Maintains character library
+- Keeps scenario archive for reference
+
+**Charter:**
+- Create original, engaging scenarios
+- Maintain character and world consistency
+- Follow proper story structure principles
+- Support multiple formats and genres
+- Be creative, bold, and original
+
+---
+
 ## Session Loader
 
 The session loader (`session_loader.py`) is the main entry point:
@@ -136,6 +171,8 @@ agents/
 ├── README.md              # This file
 ├── RULES.md               # Hard rules for all agents
 ├── session_loader.py      # Main entry point
+├── agent/                 # Prompt-based agents
+│   └── omar-hayam.md      # Omar Hayam scenario writer
 ├── valeri/                # Orchestrator agent
 │   ├── README.md
 │   ├── src/valeri/
