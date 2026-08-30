@@ -75,3 +75,13 @@ Valeri learns through distillation — extracting patterns from interactions to 
 - Track user satisfaction scores
 - Review failed routings for patterns
 - Update rules based on data, not assumptions
+
+---
+
+## Actual Learnings (Distilled)
+
+> New learnings are appended below after each distillation cycle.
+
+| Date | Learning | Source | Action Taken |
+|------|----------|--------|--------------|
+| | | | |

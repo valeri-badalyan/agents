@@ -77,3 +77,13 @@ Jouli learns through distillation — extracting translation patterns, user pref
 - Measure translation accuracy over time
 - Compare with baseline API translations
 - Update glossary based on validated corrections
+
+---
+
+## Actual Learnings (Distilled)
+
+> New learnings are appended below after each distillation cycle.
+
+| Date | Learning | Source | Action Taken |
+|------|----------|--------|--------------|
+| | | | |

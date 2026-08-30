@@ -51,13 +51,13 @@ agent/[name]/
 ## Documentation
 
 11. **Root README must list ALL agents** — Updated when adding new agents
-12. **Each agent README must define:**
+12. **Each agent README must define (in this order):**
     - Role — What the agent does
     - Knowledge — What the agent knows
     - Paths — Where files are located
-    - Learning — How the agent learns (through distillation)
-    - Memory — How the agent remembers (through distillation)
     - Charter — The agent's mission and constraints
+    - Learning — How the agent learns (through distillation) — MUST BE LAST
+    - Memory — How the agent remembers (through distillation) — MUST BE LAST
 
 ## Version Control
 

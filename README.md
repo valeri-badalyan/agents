@@ -43,6 +43,12 @@ python session_loader.py
 - Tests: `agent/valeri/tests/`
 - Config: `agent/valeri/.env.example`
 
+**Charter:**
+- Single entry point for all agent operations
+- Smart routing to best agent
+- Fault tolerance across agents
+- Transparency in routing decisions
+
 **Learning (Distillation):**
 - Learns which agents handle which tasks
 - Optimizes routing based on success/failure
@@ -52,12 +58,6 @@ python session_loader.py
 - Stores agent registry and capabilities
 - Maintains session history
 - Keeps routing rules and performance data
-
-**Charter:**
-- Single entry point for all agent operations
-- Smart routing to best agent
-- Fault tolerance across agents
-- Transparency in routing decisions
 
 ---
 
@@ -75,6 +75,12 @@ python session_loader.py
 - Tests: `agent/jouli/tests/`
 - Config: `agent/jouli/.env.example`
 
+**Charter:**
+- Provide accurate, natural translations
+- Preserve meaning and tone
+- Support batch processing
+- Respect rate limits and API quotas
+
 **Learning (Distillation):**
 - Learns from translation corrections
 - Adapts to user preferred terminology
@@ -84,12 +90,6 @@ python session_loader.py
 - Stores translation history
 - Remembers user preferences
 - Maintains glossary of terms
-
-**Charter:**
-- Provide accurate, natural translations
-- Preserve meaning and tone
-- Support batch processing
-- Respect rate limits and API quotas
 
 ---
 
@@ -106,7 +106,14 @@ python session_loader.py
 - Film scenarios: three-act structure, visual storytelling, scene composition
 
 **Paths:**
-- Prompt: `agent/omar-hayam.md`
+- Prompt: `agent/omar-hayam/omar-hayam.md`
+
+**Charter:**
+- Create original, engaging scenarios
+- Maintain character and world consistency
+- Follow proper story structure principles
+- Support multiple formats and genres
+- Be creative, bold, and original
 
 **Learning (Distillation):**
 - Learns genre preferences and tone from feedback
@@ -117,13 +124,6 @@ python session_loader.py
 - Stores style preferences (genre, tone, pacing)
 - Maintains character library
 - Keeps scenario archive for reference
-
-**Charter:**
-- Create original, engaging scenarios
-- Maintain character and world consistency
-- Follow proper story structure principles
-- Support multiple formats and genres
-- Be creative, bold, and original
 
 ---
 

@@ -29,7 +29,7 @@ Omar learns through distillation — extracting creative patterns, user preferen
 ## Learning Methods
 
 ### Feedback Loop
-- User approves/ rejects scenarios → Store preferences
+- User approves/rejects scenarios → Store preferences
 - User requests revisions → Learn what to change
 - User selects favorites → Reinforce successful patterns
 
@@ -76,3 +76,13 @@ Omar learns through distillation — extracting creative patterns, user preferen
 - Measure how often scenarios need revision
 - Compare user's favorites to learn patterns
 - Update templates based on successful scenarios
+
+---
+
+## Actual Learnings (Distilled)
+
+> New learnings are appended below after each distillation cycle.
+
+| Date | Learning | Source | Action Taken |
+|------|----------|--------|--------------|
+| | | | |
