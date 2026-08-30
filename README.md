@@ -21,11 +21,11 @@ python session_loader.py
 
 ## Agents Overview
 
-| Agent | Role | Status |
-|-------|------|--------|
-| [Valeri](./valeri/) | Orchestrator — Coordinates all agents | Active |
-| [Jouli](./jouli/) | Natural Language Translator | Active |
-| [Omar Hayam](./agent/omar-hayam.md) | Scenario Writer — Stories, narratives, games, films | Active |
+| Agent | Role | Type | Status |
+|-------|------|------|--------|
+| [Valeri](./agent/valeri/) | Orchestrator — Coordinates all agents | Python | Active |
+| [Jouli](./agent/jouli/) | Natural Language Translator | Python | Active |
+| [Omar Hayam](./agent/omar-hayam.md) | Scenario Writer — Stories, narratives, games, films | Prompt | Active |
 
 ---
 
@@ -39,9 +39,9 @@ python session_loader.py
 - Session management and state
 
 **Paths:**
-- Source: `valeri/src/valeri/`
-- Tests: `valeri/tests/`
-- Config: `valeri/.env.example`
+- Source: `agent/valeri/src/valeri/`
+- Tests: `agent/valeri/tests/`
+- Config: `agent/valeri/.env.example`
 
 **Learning (Distillation):**
 - Learns which agents handle which tasks
@@ -71,9 +71,9 @@ python session_loader.py
 - Context-aware translation
 
 **Paths:**
-- Source: `jouli/src/jouli/`
-- Tests: `jouli/tests/`
-- Config: `jouli/.env.example`
+- Source: `agent/jouli/src/jouli/`
+- Tests: `agent/jouli/tests/`
+- Config: `agent/jouli/.env.example`
 
 **Learning (Distillation):**
 - Learns from translation corrections
@@ -157,8 +157,8 @@ See [RULES.md](./RULES.md)
 
 ## Adding New Agents
 
-1. Create a folder named after the agent (lowercase, no spaces)
-2. Include: `README.md`, source code, tests
+1. Create a folder inside `agent/` named after the agent (lowercase, no spaces)
+2. Include: `README.md`, source code (for Python agents), or prompt file (for prompt agents)
 3. Update this root README with agent details
 4. Follow the rules in `RULES.md`
 
@@ -171,17 +171,16 @@ agents/
 ├── README.md              # This file
 ├── RULES.md               # Hard rules for all agents
 ├── session_loader.py      # Main entry point
-├── agent/                 # Prompt-based agents
-│   └── omar-hayam.md      # Omar Hayam scenario writer
-├── valeri/                # Orchestrator agent
-│   ├── README.md
-│   ├── src/valeri/
-│   ├── tests/
-│   └── ...
-├── jouli/                 # Translator agent
-│   ├── README.md
-│   ├── src/jouli/
-│   ├── tests/
-│   └── ...
-└── [next-agent]/          # Future agents
+└── agent/
+    ├── valeri/            # Orchestrator agent (Python)
+    │   ├── README.md
+    │   ├── src/valeri/
+    │   ├── tests/
+    │   └── ...
+    ├── jouli/             # Translator agent (Python)
+    │   ├── README.md
+    │   ├── src/jouli/
+    │   ├── tests/
+    │   └── ...
+    └── omar-hayam.md      # Scenario writer (Prompt)
 ```
