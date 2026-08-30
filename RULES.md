@@ -29,7 +29,7 @@ agent/[name]/
 ├── README.md              # Role, knowledge, paths, learning, memory, charter
 ├── voice.md               # Agent personality and communication style
 ├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
-├── [name]-learning.md     # Distillation process, what it learns, storage
+├── [name]-learning.md     # Distillation process, triggers, actual learnings
 ├── src/[name]/            # Source code
 ├── tests/                 # Test files
 ├── .env.example           # Required environment variables
@@ -42,9 +42,16 @@ agent/[name]/
 ├── README.md              # Role, knowledge, paths, learning, memory, charter
 ├── voice.md               # Agent personality and communication style
 ├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
-├── [name]-learning.md     # Distillation process, what it learns, storage
+├── [name]-learning.md     # Distillation process, triggers, actual learnings
 └── [name].md              # Agent prompt file
 ```
+
+### Learning File Structure (MANDATORY):
+Each `[name]-learning.md` MUST have:
+1. **Index** — Table of contents
+2. **Distillation Process** — How the agent learns
+3. **Triggers** — When learnings are pulled and applied
+4. **Actual Learnings** — Table for distilled learnings (append only)
 
 11. **ALL files are mandatory** — No exceptions. New agents must include every file listed above.
 

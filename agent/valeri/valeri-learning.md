@@ -1,5 +1,18 @@
 # Learning — Valeri
 
+## Index
+
+| Section | Description |
+|---------|-------------|
+| [Distillation Process](#distillation-process) | How Valeri learns |
+| [What Valeri Learns](#what-valeri-learns) | Types of learnings |
+| [Learning Methods](#learning-methods) | How learnings are captured |
+| [Storage](#storage) | Data structure |
+| [Triggers](#triggers) | When learnings are applied |
+| [Actual Learnings](#actual-learnings-distilled) | Distilled learnings log |
+
+---
+
 ## Distillation Process
 
 Valeri learns through distillation — extracting patterns from interactions to improve routing and coordination.
@@ -62,19 +75,39 @@ Valeri learns through distillation — extracting patterns from interactions to 
 }
 ```
 
-## Improvement Over Time
+---
 
-1. **Week 1:** Basic keyword routing
-2. **Week 2-4:** Learn from user corrections
-3. **Month 2+:** Predictive routing based on context
-4. **Month 6+:** Personalized routing per user
+## Triggers
 
-## Validation
+> Learnings are pulled when these triggers fire.
 
-- Compare routing accuracy monthly
-- Track user satisfaction scores
-- Review failed routings for patterns
-- Update rules based on data, not assumptions
+| Trigger | Action | Learning Applied |
+|---------|--------|------------------|
+| `on_task_received` | Route to best agent | Routing rules, confidence scores |
+| `on_routing_success` | Reinforce routing pattern | Positive reinforcement |
+| `on_routing_failure` | Adjust routing rules | Negative feedback |
+| `on_user_correction` | Update routing preferences | User preference learning |
+| `on_session_start` | Load user preferences | Session patterns |
+| `on_session_end` | Save session metrics | Performance data |
+| `on_agent_added` | Update routing rules | New agent registration |
+| `on_agent_removed` | Remove routing rules | Agent deregistration |
+| `daily_review` | Analyze performance metrics | Trend analysis |
+| `weekly_optimization` | Update routing confidence | Pattern optimization |
+
+### Trigger Example
+
+```python
+def on_task_received(task: str) -> str:
+    """Trigger: pulls routing learnings."""
+    # Pull from learning store
+    routing_rules = pull_learning("routing_rules")
+    confidence_scores = pull_learning("confidence_scores")
+    
+    # Apply learnings
+    best_agent = match_routing(task, routing_rules, confidence_scores)
+    
+    return best_agent
+```
 
 ---
 
@@ -82,6 +115,6 @@ Valeri learns through distillation — extracting patterns from interactions to 
 
 > New learnings are appended below after each distillation cycle.
 
-| Date | Learning | Source | Action Taken |
-|------|----------|--------|--------------|
-| | | | |
+| Date | Learning | Source | Trigger | Action Taken |
+|------|----------|--------|---------|--------------|
+| | | | | |

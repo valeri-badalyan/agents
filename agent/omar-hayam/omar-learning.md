@@ -1,5 +1,18 @@
 # Learning — Omar Hayam
 
+## Index
+
+| Section | Description |
+|---------|-------------|
+| [Distillation Process](#distillation-process) | How Omar learns |
+| [What Omar Learns](#what-omar-learns) | Types of learnings |
+| [Learning Methods](#learning-methods) | How learnings are captured |
+| [Storage](#storage) | Data structure |
+| [Triggers](#triggers) | When learnings are applied |
+| [Actual Learnings](#actual-learnings-distilled) | Distilled learnings log |
+
+---
+
 ## Distillation Process
 
 Omar learns through distillation — extracting creative patterns, user preferences, and storytelling techniques to improve scenario writing.
@@ -63,19 +76,40 @@ Omar learns through distillation — extracting creative patterns, user preferen
 }
 ```
 
-## Improvement Over Time
+---
 
-1. **Week 1:** Ask all clarifying questions
-2. **Week 2-4:** Learn user's favorite genres/styles
-3. **Month 2+:** Pre-fill based on preferences
-4. **Month 6+:** Predict user's creative direction
+## Triggers
 
-## Validation
+> Learnings are pulled when these triggers fire.
 
-- Track user satisfaction with scenarios
-- Measure how often scenarios need revision
-- Compare user's favorites to learn patterns
-- Update templates based on successful scenarios
+| Trigger | Action | Learning Applied |
+|---------|--------|------------------|
+| `on_scenario_requested` | Load style preferences | Genre, tone, pacing |
+| `on_genre_specified` | Load genre template | Genre-specific rules |
+| `on_character_created` | Store character pattern | Character library |
+| `on_revision_requested` | Analyze changes | Feedback patterns |
+| `on_scenario_approved` | Reinforce successful patterns | Positive feedback |
+| `on_scenario_rejected` | Learn what to avoid | Negative feedback |
+| `on_dialogue_written` | Track dialogue style | Dialogue patterns |
+| `on_act_structure_used` | Store structure preference | Structure patterns |
+| `daily_review` | Analyze feedback trends | Pattern analysis |
+| `weekly_optimization` | Update genre templates | Template refinement |
+
+### Trigger Example
+
+```python
+def on_scenario_requested(genre: str, tone: str):
+    """Trigger: pulls style learnings."""
+    # Pull from learning store
+    style_prefs = pull_learning("style_preferences")
+    genre_templates = pull_learning("genre_templates")
+    
+    # Apply learnings
+    template = genre_templates.get(genre, default_template)
+    style = {**style_prefs, "genre": genre, "tone": tone}
+    
+    return template, style
+```
 
 ---
 
@@ -83,6 +117,6 @@ Omar learns through distillation — extracting creative patterns, user preferen
 
 > New learnings are appended below after each distillation cycle.
 
-| Date | Learning | Source | Action Taken |
-|------|----------|--------|--------------|
-| | | | |
+| Date | Learning | Source | Trigger | Action Taken |
+|------|----------|--------|---------|--------------|
+| | | | | |
