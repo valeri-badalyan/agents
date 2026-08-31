@@ -171,8 +171,8 @@ mkdir agent/[name]
 agent/[name]/
 ├── README.md              # Role, knowledge, paths, learning, memory, charter
 ├── voice.md               # Personality, tone, communication style
-├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
-├── [name]-learning.md     # Distillation process, what it learns, storage
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
 ├── src/[name]/            # Source code
 ├── tests/                 # Test files
 ├── .env.example           # Required environment variables
@@ -184,8 +184,8 @@ agent/[name]/
 agent/[name]/
 ├── README.md              # Role, knowledge, paths, learning, memory, charter
 ├── voice.md               # Personality, tone, communication style
-├── [name]-charter.md      # Mission, responsibilities, boundaries, rules
-├── [name]-learning.md     # Distillation process, what it learns, storage
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
 └── [name].md              # Agent prompt file
 ```
 
@@ -208,8 +208,8 @@ agents/
     ├── valeri/                # Orchestrator agent (Python)
     │   ├── README.md
     │   ├── voice.md
-    │   ├── valeri-charter.md
-    │   ├── valeri-learning.md
+    │   ├── charter.md
+    │   ├── learning.md
     │   ├── src/valeri/
     │   ├── tests/
     │   ├── .env.example
@@ -217,8 +217,8 @@ agents/
     ├── jouli/                 # Translator agent (Python)
     │   ├── README.md
     │   ├── voice.md
-    │   ├── jouli-charter.md
-    │   ├── jouli-learning.md
+    │   ├── charter.md
+    │   ├── learning.md
     │   ├── src/jouli/
     │   ├── tests/
     │   ├── .env.example
@@ -226,7 +226,7 @@ agents/
     └── omar-hayam/            # Scenario writer (Prompt)
         ├── README.md
         ├── voice.md
-        ├── omar-charter.md
-        ├── omar-learning.md
+        ├── charter.md
+        ├── learning.md
         └── omar-hayam.md
 ```
