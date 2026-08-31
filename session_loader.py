@@ -26,6 +26,31 @@ def get_agent_dir(repo_root: Path | None = None) -> Path:
     return root
 
 
+def is_prompt_agent(agent_path: Path) -> bool:
+    """Check if agent is a prompt-based agent (no src/ folder)."""
+    return not (agent_path / "src").exists()
+
+
+def load_prompt_agent(agent_path: Path) -> dict[str, Any]:
+    """Load a prompt-based agent."""
+    agent_data = {
+        "type": "prompt",
+        "name": agent_path.name,
+        "path": str(agent_path),
+        "files": {},
+    }
+
+    for md_file in agent_path.glob("*.md"):
+        agent_data["files"][md_file.stem] = md_file.read_text(encoding="utf-8")
+
+    return agent_data
+
+
+AGENT_MODULE_MAP = {
+    "omar-hayam": "omar",
+}
+
+
 def load_agent(agent_name: str, repo_root: Path | None = None) -> Any:
     """Load a specific agent by name."""
     agent_dir = get_agent_dir(repo_root)
@@ -34,14 +59,18 @@ def load_agent(agent_name: str, repo_root: Path | None = None) -> Any:
     if not agent_path.exists():
         raise ValueError(f"Agent '{agent_name}' not found at {agent_path}")
 
+    if is_prompt_agent(agent_path):
+        return load_prompt_agent(agent_path)
+
     src_path = agent_path / "src"
     if src_path.exists() and str(src_path) not in sys.path:
         sys.path.insert(0, str(src_path))
 
     import importlib
-    module = importlib.import_module(agent_name)
+    module_name = AGENT_MODULE_MAP.get(agent_name, agent_name)
+    module = importlib.import_module(module_name)
 
-    agent_class_name = agent_name.capitalize()
+    agent_class_name = module_name.capitalize()
     if hasattr(module, agent_class_name):
         return getattr(module, agent_class_name)()
     return module
@@ -59,7 +88,7 @@ def load_all_agents(repo_root: Path | None = None) -> dict[str, Any]:
             item.is_dir()
             and item.name not in excluded
             and not item.name.startswith(".")
-            and ((item / "src").exists() or (item / "pyproject.toml").exists())
+            and ((item / "src").exists() or (item / "README.md").exists())
         ):
             try:
                 agents[item.name] = load_agent(item.name, repo_root)
@@ -111,17 +140,25 @@ def main():
             if item.is_dir() and item.name not in excluded and not item.name.startswith("."):
                 has_src = (item / "src").exists()
                 has_readme = (item / "README.md").exists()
+                is_prompt = not has_src
                 has_voice = (item / "voice.md").exists()
-                status = "✓" if has_src and has_readme else "✗"
+                is_valid = has_readme and (has_src or is_prompt)
+                status = "[OK]" if is_valid else "[--]"
+                agent_type = "[prompt]" if is_prompt else "[python]"
                 voice = " [voice]" if has_voice else ""
-                print(f"  {status} {item.name}{voice}")
+                print(f"  {status} {item.name} {agent_type}{voice}")
         return
 
     agent_name = args.agent or "valeri"
     session = create_session(agent_name, args.repo)
 
-    print(f"Session created with agent: {session['active_agent']}")
-    print(f"Loaded agents: {list(session['agents'].keys())}")
+    agent = session["agents"].get(session["active_agent"])
+    if isinstance(agent, dict) and agent.get("type") == "prompt":
+        print(f"Loaded prompt agent: {session['active_agent']}")
+        print(f"Files: {list(agent['files'].keys())}")
+    else:
+        print(f"Session created with agent: {session['active_agent']}")
+        print(f"Loaded agents: {list(session['agents'].keys())}")
 
 
 if __name__ == "__main__":
