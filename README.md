@@ -17,14 +17,26 @@ python session_loader.py jouli
 python session_loader.py
 ```
 
+> V3 is the default orchestrator. Valeri is kept for backward compatibility.
+
 ---
 
 ## Agents Overview
 
 | Agent | Role | Status |
 |-------|------|--------|
-| [Valeri](./valeri/) | Orchestrator — Coordinates all agents | Active |
+| [V3](./v3/) | Orchestrator — Coordinates all agents (replaces Valeri) | Active |
+| [Valeri](./valeri/) | Legacy orchestrator — kept for backward compatibility | Legacy |
 | [Jouli](./jouli/) | Natural Language Translator | Active |
+| [Enrique](./enrique/) | Humorous trilingual companion (RU/AM/EN) — trigger: enrike/enrique | Active |
+| [Messi](./messi/) | Football Agent — tactics, training, motivation, quiz — trigger: Анкара Месси / Ankara Messi | Active |
+| [Zhanel](./zhanel/) | Marketer — strategy, copy, content-plans, launches — trigger: Жанель иди сюда / жанель / zhanel | Active |
+| [Olinho](./olinho/) | Idea-to-browser — сайты, игры, прототипы + открытие в Chrome — trigger: Олиньо!! / олинью / olinho | Active |
+| [Marika](./marika/) | Руководитель статистики — describe, growth, trend, shares, отчёты RU/EN/ZH — trigger: марика / marika | Active |
+| [Ferracho](./ferracho/) | Бизнес-аналитик — SWOT, воронка, юнит-экономика, риски, аудит — trigger: Феррачо!! / феррачо / ferracho | Active |
+| [Halib](./halib/) | Дизайнер — концепты, палитры, типографика, макеты, лого, аудит — trigger: Халиб / халиб / halib | Active |
+| [Aryubi](./aryubi/) | Финансист — бюджет, кэшфлоу, P&L, инвестиции — trigger: Арюби / арюби / aryubi | Active |
+| [Mika](./mika/) | Весёлый провайдер — тарифы, покрытие, диагностика, подключение — trigger: мика / mika | Active |
 
 ---
 
@@ -92,6 +104,33 @@ python session_loader.py
 
 ---
 
+## Messi — Football Agent
+
+**Role:** Tactics analysis, training plans, motivation, quiz
+
+**Knowledge:**
+- Formations 4-4-2, 4-3-3, 3-5-2, 4-2-3-1, 5-3-2
+- Training levels beginner/amateur/pro
+- Football quiz
+
+**Paths:**
+- Source: `messi/src/messi/`
+- Tests: `messi/tests/`
+- Config: `messi/.env.example`
+
+**Learning (Distillation):**
+- Learns favorite formations and positions
+- Adapts training load
+
+**Memory (Distillation):**
+- Stores training history and quiz scores
+- Remembers user preferences
+
+**Charter:**
+- Love the game, accurate advice, safe training
+
+---
+
 ## Session Loader
 
 The session loader (`session_loader.py`) is the main entry point:
@@ -136,7 +175,12 @@ agents/
 ├── README.md              # This file
 ├── RULES.md               # Hard rules for all agents
 ├── session_loader.py      # Main entry point
-├── valeri/                # Orchestrator agent
+├── v3/                    # Orchestrator agent (default)
+│   ├── README.md
+│   ├── src/v3/
+│   ├── tests/
+│   └── ...
+├── valeri/                # Legacy orchestrator agent
 │   ├── README.md
 │   ├── src/valeri/
 │   ├── tests/

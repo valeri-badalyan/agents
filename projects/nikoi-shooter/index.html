@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nikoi shooter — Олиньо!!</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <h1>🔫 NIKOI SHOOTER</h1>
+  <p>Кликай по мишеням! 30 секунд, максимум очков. Промахи снижают комбо!</p>
+  <div class="hud">
+    <div class="stat">🏆 Счёт: <span id="score">0</span></div>
+    <div class="stat">🔥 Комбо: <span id="combo">x1</span></div>
+    <div class="stat">⏱️ Время: <span id="time">30</span></div>
+    <div class="stat">🎯 Точность: <span id="acc">100%</span></div>
+  </div>
+  <div class="controls">
+    <button id="play">▶ СТАРТ!</button>
+    <button id="reset" class="ghost">↺ Заново</button>
+  </div>
+  <div class="best">Рекорд: <span id="best">0</span></div>
+</header>
+
+<main id="main">
+  <div id="arena">
+    <div id="message">Жми СТАРТ и стреляй! 💥</div>
+  </div>
+  <section class="card rules">
+    <h2>Как играть</h2>
+    <p>👾 Мишени появляются в арене — кликай чтобы сбить. <b>+10 × комбо</b> за попадание. Промах по арене = комбо сгорает. Каждые 5 попаданий — уровень выше, цели быстрее!</p>
+  </section>
+</main>
+
+<footer>Собрано Олиньо!! — открой в Google Chrome. Идея: игра кликер Nikoi shooter</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Олиньо Шутер — Космическая оборона</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+<h1>🚀 Олиньо Шутер</h1>
+<p>Космическая оборона: отбивай волны пришельцев! WASD / стрелки — движение, Пробел / клик — огонь.</p>
+<div class="hud">
+<div>Счёт: <span id="score">0</span></div>
+<div>Жизни: <span id="lives">❤️❤️❤️</span></div>
+<div>Уровень: <span id="level">1</span></div>
+</div>
+<div class="row">
+<button id="startBtn">▶ Старт</button>
+<button id="restartBtn" class="ghost">↻ Заново</button>
+</div>
+</header>
+<main>
+<canvas id="game" width="960" height="600"></canvas>
+<div id="overlay" class="overlay">
+<div class="panel">
+<h2 id="ovTitle">Жми Старт, пилот!</h2>
+<p id="ovText">Пробел / клик — стрелять. Не дай им долететь до тебя.</p>
+<button id="playBtn">Поехали 🚀</button>
+</div>
+</div>
+<section class="cards">
+<div class="card"><h3>🎮 Управление</h3><p>WASD / ←↑↓→ — лететь<br>Пробел / мышь / палец — огонь<br>P — пауза</p></div>
+<div class="card"><h3>👾 Враги</h3><p>Красный — обычный, жёлтый — быстрый, фиолетовый — танк (3 попадания). Каждые 500 очков — новый уровень!</p></div>
+<div class="card"><h3>🌐 Как выложить в Гугл</h3><p>1. Открой файл в Chrome<br>2. Для ссылки: перетащи папку на <b>app.netlify.com/drop</b><br>3. Ссылку уже индексирует Google</p></div>
+</section>
+</main>
+<footer>Собрано Олиньо!! — открой в Google Chrome 🚀😄</footer>
+<script src="app.js"></script>
+</body>
+</html>

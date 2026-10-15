@@ -1,0 +1,69 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "v3",
+  "instructions": ["AGENTS.md", "RULES.md"],
+  "agent": {
+    "v3": {
+      "description": "V3 master orchestrator — coordinates all agents with improved routing (replaces Valeri).",
+      "mode": "primary",
+      "permission": {
+        "task": "allow"
+      }
+    },
+    "valeri": {
+      "description": "Master orchestrator that coordinates all agents and routes tasks to the appropriate specialist.",
+      "mode": "primary",
+      "permission": {
+        "task": "allow"
+      }
+    },
+    "jouli": {
+      "description": "Natural language translation engine supporting 100+ languages with auto-detection and context-aware translations.",
+      "mode": "subagent"
+    },
+    "leo-davinci": {
+      "description": "3D design agent for creating scenes, illustrations, assets, and configuring render settings.",
+      "mode": "subagent"
+    },
+    "omar-hayam": {
+      "description": "Narrative agent for creating storylines, characters, worlds, and dialogue for games and films.",
+      "mode": "subagent"
+    },
+    "enrique": {
+      "description": "Humorous trilingual companion (RU/AM/EN). Use when user writes enrike or enrique. Remembers talks, main things, patterns, reasoning. Makes jokes.",
+      "mode": "subagent"
+    },
+    "messi": {
+      "description": "Football agent for tactics analysis, training plans, motivation and quizzes. Use when user writes Анкара Месси or Ankara Messi.",
+      "mode": "subagent"
+    },
+    "zhanel": {
+      "description": "Marketer Zhanel — strategy, copy, content-plans, launches. Use when user writes Жанель иди сюда, жанель or zhanel.",
+      "mode": "subagent"
+    },
+    "olinho": {
+      "description": "Олиньо!! — реализует идеи и выкладывает в браузер: сайты, игры, прототипы. Use when user writes Олиньо!!, олинью, олинью or olinho.",
+      "mode": "subagent"
+    },
+    "marika": {
+      "description": "Marika — руководитель статистики. Descriptive stats, growth, trends, shares, reports RU/EN/ZH. Use when user writes марика or marika.",
+      "mode": "subagent"
+    },
+    "ferracho": {
+      "description": "Ferracho!! — бизнес-аналитик. SWOT, воронка, юнит-экономика, риски, аудит. Use when user writes Феррачо!!, феррачо or ferracho.",
+      "mode": "subagent"
+    },
+    "halib": {
+      "description": "Халиб — дизайнер. Концепты, палитры, типографика, UI-макеты, лого-брифы, стайлгайды, аудит. Use when user writes Халиб, халиб or halib.",
+      "mode": "subagent"
+    },
+    "aryubi": {
+      "description": "Арюби — финансист. Бюджет, кэшфлоу, P&L, инвестиции, финансовый разбор. Use when user writes Арюби, арюби or aryubi.",
+      "mode": "subagent"
+    },
+    "mika": {
+      "description": "Mika — весёлый IT/интернет-провайдер. Тарифы, покрытие, диагностика, подключение RU/EN/HY. Use when user writes мика or mika.",
+      "mode": "subagent"
+    }
+  }
+}

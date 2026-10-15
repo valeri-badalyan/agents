@@ -13,7 +13,7 @@ def find_repo_root() -> Path:
     while current != current.parent:
         if (
             ((current / ".git").exists() or (current / "README.md").exists())
-            and ((current / "valeri").exists() or (current / "jouli").exists())
+            and ((current / "v3").exists() or (current / "valeri").exists() or (current / "jouli").exists())
         ):
             return current
         current = current.parent
@@ -46,7 +46,7 @@ def load_all_agents(repo_root: Path | None = None) -> dict[str, Any]:
     root = repo_root or find_repo_root()
     agents = {}
 
-    excluded = {"valeri", "__pycache__", ".git", ".github", "node_modules", ".env"}
+    excluded = {"v3", "valeri", "__pycache__", ".git", ".github", "node_modules", ".env"}
 
     for item in root.iterdir():
         if (
@@ -73,16 +73,24 @@ def create_session(agent_name: str | None = None, repo_root: Path | None = None)
         session["active_agent"] = agent_name
     else:
         try:
-            valeri = load_agent("valeri", root)
-            session["agents"]["valeri"] = valeri
-            session["active_agent"] = "valeri"
-            loaded = valeri.load_agents()
+            v3 = load_agent("v3", root)
+            session["agents"]["v3"] = v3
+            session["active_agent"] = "v3"
+            loaded = v3.load_agents()
             for name in loaded:
-                session["agents"][name] = valeri.get_agent(name)
+                session["agents"][name] = v3.get_agent(name)
         except (ImportError, ValueError):
-            session["agents"] = load_all_agents(root)
-            if session["agents"]:
-                session["active_agent"] = next(iter(session["agents"].keys()))
+            try:
+                valeri = load_agent("valeri", root)
+                session["agents"]["valeri"] = valeri
+                session["active_agent"] = "valeri"
+                loaded = valeri.load_agents()
+                for name in loaded:
+                    session["agents"][name] = valeri.get_agent(name)
+            except (ImportError, ValueError):
+                session["agents"] = load_all_agents(root)
+                if session["agents"]:
+                    session["active_agent"] = next(iter(session["agents"].keys()))
 
     return session
 
@@ -92,7 +100,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="Agent Session Loader")
-    parser.add_argument("agent", nargs="?", help="Agent name to load (default: valeri)")
+    parser.add_argument("agent", nargs="?", help="Agent name to load (default: v3)")
     parser.add_argument("--list", "-l", action="store_true", help="List all agents")
     parser.add_argument("--repo", "-r", type=Path, help="Repository root path")
 
@@ -101,16 +109,16 @@ def main():
 
     if args.list:
         print("Available agents:")
-        excluded = {"valeri", "__pycache__", ".git", ".github", "node_modules"}
+        excluded = {"v3", "valeri", "__pycache__", ".git", ".github", "node_modules"}
         for item in sorted(root.iterdir()):
             if item.is_dir() and item.name not in excluded and not item.name.startswith("."):
                 has_src = (item / "src").exists()
                 has_readme = (item / "README.md").exists()
-                status = "✓" if has_src and has_readme else "✗"
+                status = "OK" if has_src and has_readme else "!!"
                 print(f"  {status} {item.name}")
         return
 
-    agent_name = args.agent or "valeri"
+    agent_name = args.agent or "v3"
     session = create_session(agent_name, root)
 
     print(f"Session created with agent: {session['active_agent']}")

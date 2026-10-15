@@ -23,7 +23,7 @@ class AgentRegistry:
                 item.is_dir()
                 and item.name not in self._excluded
                 and not item.name.startswith(".")
-                and (item / "src").exists() or (item / "pyproject.toml").exists()
+                and ((item / "src").exists() or (item / "pyproject.toml").exists())
             ):
                 self._agents[item.name] = item
 
