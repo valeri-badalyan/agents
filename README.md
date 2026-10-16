@@ -23,20 +23,21 @@ python session_loader.py
 
 ## Agents Overview
 
-| Agent | Role | Status |
-|-------|------|--------|
-| [V3](./v3/) | Orchestrator — Coordinates all agents (replaces Valeri) | Active |
-| [Valeri](./valeri/) | Legacy orchestrator — kept for backward compatibility | Legacy |
-| [Jouli](./jouli/) | Natural Language Translator | Active |
-| [Enrique](./enrique/) | Humorous trilingual companion (RU/AM/EN) — trigger: enrike/enrique | Active |
-| [Messi](./messi/) | Football Agent — tactics, training, motivation, quiz — trigger: Анкара Месси / Ankara Messi | Active |
-| [Zhanel](./zhanel/) | Marketer — strategy, copy, content-plans, launches — trigger: Жанель иди сюда / жанель / zhanel | Active |
-| [Olinho](./olinho/) | Idea-to-browser — сайты, игры, прототипы + открытие в Chrome — trigger: Олиньо!! / олинью / olinho | Active |
-| [Marika](./marika/) | Руководитель статистики — describe, growth, trend, shares, отчёты RU/EN/ZH — trigger: марика / marika | Active |
-| [Ferracho](./ferracho/) | Бизнес-аналитик — SWOT, воронка, юнит-экономика, риски, аудит — trigger: Феррачо!! / феррачо / ferracho | Active |
-| [Halib](./halib/) | Дизайнер — концепты, палитры, типографика, макеты, лого, аудит — trigger: Халиб / халиб / halib | Active |
-| [Aryubi](./aryubi/) | Финансист — бюджет, кэшфлоу, P&L, инвестиции — trigger: Арюби / арюби / aryubi | Active |
-| [Mika](./mika/) | Весёлый провайдер — тарифы, покрытие, диагностика, подключение — trigger: мика / mika | Active |
+| Agent | Role | Type | Status |
+|-------|------|------|--------|
+| [V3](./v3/) | Orchestrator — Coordinates all agents (replaces Valeri) | Python | Active |
+| [Valeri](./agent/valeri/) | Legacy orchestrator — kept for backward compatibility | Python | Legacy |
+| [Jouli](./agent/jouli/) | Natural Language Translator | Python | Active |
+| [Omar Hayam](./agent/omar-hayam/) | Scenario Writer — Stories, narratives, games, films | Python | Active |
+| [Enrique](./enrique/) | Humorous trilingual companion (RU/AM/EN) — trigger: enrike/enrique | Python | Active |
+| [Messi](./messi/) | Football Agent — tactics, training, motivation, quiz — trigger: Анкара Месси / Ankara Messi | Python | Active |
+| [Zhanel](./zhanel/) | Marketer — strategy, copy, content-plans, launches — trigger: Жанель иди сюда / жанель / zhanel | Python | Active |
+| [Olinho](./olinho/) | Idea-to-browser — сайты, игры, прототипы + открытие в Chrome — trigger: Олиньо!! / олинью / olinho | Python | Active |
+| [Marika](./marika/) | Руководитель статистики — describe, growth, trend, shares, отчёты RU/EN/ZH — trigger: марика / marika | Python | Active |
+| [Ferracho](./ferracho/) | Бизнес-аналитик — SWOT, воронка, юнит-экономика, риски, аудит — trigger: Феррачо!! / феррачо / ferracho | Python | Active |
+| [Halib](./halib/) | Дизайнер — концепты, палитры, типографика, макеты, лого, аудит — trigger: Халиб / халиб / halib | Python | Active |
+| [Aryubi](./aryubi/) | Финансист — бюджет, кэшфлоу, P&L, инвестиции — trigger: Арюби / арюби / aryubi | Python | Active |
+| [Mika](./mika/) | Весёлый провайдер — тарифы, покрытие, диагностика, подключение — trigger: мика / mika | Python | Active |
 
 ---
 
@@ -50,9 +51,15 @@ python session_loader.py
 - Session management and state
 
 **Paths:**
-- Source: `valeri/src/valeri/`
-- Tests: `valeri/tests/`
-- Config: `valeri/.env.example`
+- Source: `agent/valeri/src/valeri/`
+- Tests: `agent/valeri/tests/`
+- Config: `agent/valeri/.env.example`
+
+**Charter:**
+- Single entry point for all agent operations
+- Smart routing to best agent
+- Fault tolerance across agents
+- Transparency in routing decisions
 
 **Learning (Distillation):**
 - Learns which agents handle which tasks
@@ -63,12 +70,6 @@ python session_loader.py
 - Stores agent registry and capabilities
 - Maintains session history
 - Keeps routing rules and performance data
-
-**Charter:**
-- Single entry point for all agent operations
-- Smart routing to best agent
-- Fault tolerance across agents
-- Transparency in routing decisions
 
 ---
 
@@ -82,9 +83,15 @@ python session_loader.py
 - Context-aware translation
 
 **Paths:**
-- Source: `jouli/src/jouli/`
-- Tests: `jouli/tests/`
-- Config: `jouli/.env.example`
+- Source: `agent/jouli/src/jouli/`
+- Tests: `agent/jouli/tests/`
+- Config: `agent/jouli/.env.example`
+
+**Charter:**
+- Provide accurate, natural translations
+- Preserve meaning and tone
+- Support batch processing
+- Respect rate limits and API quotas
 
 **Learning (Distillation):**
 - Learns from translation corrections
@@ -96,11 +103,39 @@ python session_loader.py
 - Remembers user preferences
 - Maintains glossary of terms
 
+---
+
+## Omar Hayam — Scenario Writer Agent
+
+**Role:** Creates storylines, narratives, and scenarios for games and films
+
+**Knowledge:**
+- Narrative design: story structure, plot arcs, pacing, tension curves
+- Character development: backstories, motivations, relationships, arcs
+- World-building: settings, lore, rules of the universe, atmosphere
+- Dialogue: natural, character-specific speech patterns and subtext
+- Game scenarios: branching narratives, player agency, quest design
+- Film scenarios: three-act structure, visual storytelling, scene composition
+
+**Paths:**
+- Prompt: `agent/omar-hayam/omar-hayam.md`
+
 **Charter:**
-- Provide accurate, natural translations
-- Preserve meaning and tone
-- Support batch processing
-- Respect rate limits and API quotas
+- Create original, engaging scenarios
+- Maintain character and world consistency
+- Follow proper story structure principles
+- Support multiple formats and genres
+- Be creative, bold, and original
+
+**Learning (Distillation):**
+- Learns genre preferences and tone from feedback
+- Adapts character voices based on user corrections
+- Improves pacing and structure over time
+
+**Memory (Distillation):**
+- Stores style preferences (genre, tone, pacing)
+- Maintains character library
+- Keeps scenario archive for reference
 
 ---
 
@@ -159,12 +194,45 @@ See [RULES.md](./RULES.md)
 
 ---
 
-## Adding New Agents
+## Adding New Agents — MANDATORY STRUCTURE
 
-1. Create a folder named after the agent (lowercase, no spaces)
-2. Include: `README.md`, source code, tests
-3. Update this root README with agent details
-4. Follow the rules in `RULES.md`
+All new agents **MUST** follow this structure. No exceptions.
+
+### Step 1: Create folder
+```bash
+mkdir agent/[name]
+```
+
+### Step 2: Create ALL required files
+
+**For Python agents:**
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Personality, tone, communication style
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
+├── src/[name]/            # Source code
+├── tests/                 # Test files
+├── .env.example           # Required environment variables
+└── pyproject.toml         # Dependencies and config
+```
+
+**For Prompt agents:**
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Personality, tone, communication style
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
+└── [name].md              # Agent prompt file
+```
+
+### Step 3: Update root README
+Add agent to the Agents Overview table.
+
+### Step 4: Follow RULES.md
+All rules in [RULES.md](./RULES.md) apply.
 
 ---
 
@@ -172,23 +240,34 @@ See [RULES.md](./RULES.md)
 
 ```
 agents/
-├── README.md              # This file
-├── RULES.md               # Hard rules for all agents
-├── session_loader.py      # Main entry point
-├── v3/                    # Orchestrator agent (default)
-│   ├── README.md
-│   ├── src/v3/
-│   ├── tests/
-│   └── ...
-├── valeri/                # Legacy orchestrator agent
-│   ├── README.md
-│   ├── src/valeri/
-│   ├── tests/
-│   └── ...
-├── jouli/                 # Translator agent
-│   ├── README.md
-│   ├── src/jouli/
-│   ├── tests/
-│   └── ...
-└── [next-agent]/          # Future agents
+├── README.md                  # This file
+├── RULES.md                   # Hard rules for all agents
+├── session_loader.py          # Main entry point (searches agent/ first, then root)
+├── v3/                        # Orchestrator agent (default)
+├── enrique/, messi/, ...      # Agents not yet moved into agent/
+└── agent/
+    ├── valeri/                # Legacy orchestrator agent (Python)
+    │   ├── README.md
+    │   ├── voice.md
+    │   ├── charter.md
+    │   ├── learning.md
+    │   ├── src/valeri/
+    │   ├── tests/
+    │   ├── .env.example
+    │   └── pyproject.toml
+    ├── jouli/                 # Translator agent (Python)
+    │   ├── README.md
+    │   ├── voice.md
+    │   ├── charter.md
+    │   ├── learning.md
+    │   ├── src/jouli/
+    │   ├── tests/
+    │   ├── .env.example
+    │   └── pyproject.toml
+    └── omar-hayam/            # Scenario writer (Python)
+        ├── README.md
+        ├── voice.md
+        ├── charter.md
+        ├── learning.md
+        └── src/omar/
 ```

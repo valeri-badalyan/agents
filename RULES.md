@@ -18,26 +18,53 @@ These rules apply to **ALL agents** in this repository. No exceptions.
 7. **Tests must be isolated** — No external API calls in tests (mock everything)
 8. **Tests must pass before commit** — Run `pytest` before pushing
 
-## Structure
+## Structure — MANDATORY
 
-9. **Each agent in its own folder** — Named after the agent (lowercase)
-10. **Each agent folder must have:**
-    - `README.md` — Role, knowledge, paths, learning, memory, charter
-    - `src/` — Source code
-    - `tests/` — Test files
-    - `.env.example` — Required environment variables
-    - `pyproject.toml` — Dependencies and config
+9. **Each agent MUST be in `agent/` folder** — Named after the agent (lowercase, no spaces)
+10. **Each agent folder MUST have these exact files:**
+
+### For Python Agents:
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Agent personality and communication style
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
+├── src/[name]/            # Source code
+├── tests/                 # Test files
+├── .env.example           # Required environment variables
+└── pyproject.toml         # Dependencies and config
+```
+
+### For Prompt Agents:
+```
+agent/[name]/
+├── README.md              # Role, knowledge, paths, learning, memory, charter
+├── voice.md               # Agent personality and communication style
+├── charter.md             # Mission, responsibilities, boundaries, rules
+├── learning.md            # Distillation process, triggers, actual learnings
+└── [name].md              # Agent prompt file
+```
+
+### Learning File Structure (MANDATORY):
+Each `learning.md` MUST have:
+1. **Index** — Table of contents
+2. **Distillation Process** — How the agent learns
+3. **Triggers** — When learnings are pulled and applied
+4. **Actual Learnings** — Table for distilled learnings (append only)
+
+11. **ALL files are mandatory** — No exceptions. New agents must include every file listed above.
 
 ## Documentation
 
 11. **Root README must list ALL agents** — Updated when adding new agents
-12. **Each agent README must define:**
+12. **Each agent README must define (in this order):**
     - Role — What the agent does
     - Knowledge — What the agent knows
     - Paths — Where files are located
-    - Learning — How the agent learns (through distillation)
-    - Memory — How the agent remembers (through distillation)
     - Charter — The agent's mission and constraints
+    - Learning — How the agent learns (through distillation) — MUST BE LAST
+    - Memory — How the agent remembers (through distillation) — MUST BE LAST
 
 ## Version Control
 

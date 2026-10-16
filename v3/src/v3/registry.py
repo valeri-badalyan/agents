@@ -29,7 +29,16 @@ class AgentRegistry:
             ".github",
             "node_modules",
             "projects",
+            "agent",
         }
+
+    def _search_dirs(self) -> list[Path]:
+        """Folders that may hold agents; agent/ comes last so it wins on duplicates."""
+        dirs = [self.repo_root]
+        agent_dir = self.repo_root / "agent"
+        if agent_dir.is_dir():
+            dirs.append(agent_dir)
+        return dirs
 
     def discover_agents(self) -> list[str]:
         """Discover all agent folders in the repository.
@@ -38,11 +47,12 @@ class AgentRegistry:
             Sorted list of discovered agent names.
         """
         self._agents.clear()
-        try:
-            entries = list(self.repo_root.iterdir())
-        except OSError as exc:
-            logger.error("Failed to list repo root %s: %s", self.repo_root, exc)
-            return []
+        entries: list[Path] = []
+        for search_dir in self._search_dirs():
+            try:
+                entries.extend(search_dir.iterdir())
+            except OSError as exc:
+                logger.error("Failed to list %s: %s", search_dir, exc)
 
         for item in entries:
             if (
@@ -70,10 +80,11 @@ class AgentRegistry:
         if agent_name in self._agents:
             return self._agents[agent_name]
 
-        path = self.repo_root / agent_name
-        if path.exists() and path.is_dir():
-            self._agents[agent_name] = path
-            return path
+        for search_dir in reversed(self._search_dirs()):
+            path = search_dir / agent_name
+            if path.exists() and path.is_dir():
+                self._agents[agent_name] = path
+                return path
 
         return None
 
