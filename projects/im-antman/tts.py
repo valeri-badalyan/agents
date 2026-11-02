@@ -17,20 +17,20 @@ SR = 44100
 # speaker -> (rhvoice voice, espeak voice, pitch factor, tempo)
 VOICES: dict[str, dict[str, tuple[str, str, float, float]]] = {
     "ru": {
-        "N": ("aleksandr", "ru", 0.92, 0.95),
-        "A": ("aleksandr", "ru", 1.12, 1.05),
-        "S": ("pavel", "ru", 1.0, 1.1),
-        "M": ("anna", "ru", 1.0, 1.0),
-        "P": ("irina", "ru", 1.08, 1.12),
-        "B": ("pavel", "ru", 0.78, 0.92),
+        "N": ("elena", "ru", 1.0, 0.98),
+        "A": ("aleksandr", "ru", 1.14, 1.05),
+        "S": ("aleksandr", "ru", 1.32, 1.12),
+        "M": ("anna", "ru", 1.05, 1.0),
+        "P": ("aleksandr", "ru", 0.95, 1.18),
+        "B": ("aleksandr", "ru", 0.74, 0.93),
     },
     "en": {
-        "N": ("alan", "en", 0.92, 0.95),
-        "A": ("bdl", "en-us", 1.1, 1.05),
-        "S": ("alan", "en", 1.12, 1.1),
-        "M": ("slt", "en-us", 1.0, 1.0),
-        "P": ("clb", "en-us", 1.06, 1.1),
-        "B": ("bdl", "en-us", 0.78, 0.92),
+        "N": ("clb", "en", 1.0, 0.98),
+        "A": ("bdl", "en-us", 1.12, 1.05),
+        "S": ("bdl", "en-us", 1.32, 1.12),
+        "M": ("slt", "en-us", 1.05, 1.0),
+        "P": ("bdl", "en-us", 0.95, 1.18),
+        "B": ("bdl", "en-us", 0.74, 0.93),
     },
 }
 
@@ -42,6 +42,10 @@ def _rhvoice(text: str, voice: str) -> bytes | None:
         return None
     try:
         tts = _rhvoice.tts if hasattr(_rhvoice, "tts") else TTS(threads=1)
+        if not hasattr(_rhvoice, "tts"):
+            import atexit
+
+            atexit.register(tts.join)
         _rhvoice.tts = tts  # type: ignore[attr-defined]
         if voice not in tts.voices:
             log.warning("RHVoice voice %s missing; have %s", voice, tts.voices)
