@@ -16,6 +16,7 @@ This repository contains specialized AI agents configured as opencode subagents.
 - **Halib** — Designer (concepts, palettes, typography, layouts, logo, style guides, audit). Trigger: Халиб / халиб / halib
 - **Aryubi** — Финансист (budget, cashflow, P&L, investments, разбор). Trigger: Арюби / арюби / aryubi
 - **Mika** — Весёлый провайдер (тарифы, покрытие, диагностика, подключение RU/EN/HY). Trigger: мика / mika
+- **Sandy** — Музыкальный директор (подбор музыки, сетлисты, тональности, репетиции, брифы). Trigger: сэнди / санди / sandy
 
 ## Quick Start
 
@@ -58,6 +59,9 @@ python session_loader.py aryubi
 
 # Load provider (also triggers on мика / mika)
 python session_loader.py mika
+
+# Load music director (also triggers on сэнди / санди / sandy)
+python session_loader.py sandy
 ```
 
 ## Opencode Configuration
@@ -79,6 +83,7 @@ Agents are configured in `.opencode/agent/` directory:
 │   ├── halib.md           # Designer (subagent mode, trigger: Халиб / халиб / halib)
 │   ├── aryubi.md          # Financier (subagent mode, trigger: Арюби / арюби / aryubi)
 │   ├── mika.md            # Provider (subagent mode, trigger: мика / mika)
+│   ├── sandy.md           # Music director (subagent mode, trigger: сэнди / санди / sandy)
 opencode.json              # Main configuration
 ```
 
@@ -95,6 +100,7 @@ V3 is the default primary agent. It routes tasks to subagents:
 - **Design tasks (concept, palette, layout, logo, audit)** → Halib agent
 - **Finance tasks (budget, cashflow, P&L, investments)** → Aryubi agent
 - **Provider tasks (tariffs, coverage, diagnosis, connection)** → Mika agent
+- **Music tasks (direction, setlist, keys, rehearsal, soundtrack brief)** → Sandy agent
 
 ## Rules
 
@@ -114,6 +120,7 @@ See `RULES.md` for hard rules governing all agents.
 - `halib/` — Designer agent (src, tests, config)
 - `aryubi/` — Financier agent (src, tests, config)
 - `mika/` — Provider agent (src, tests, config)
+- `sandy/` — Music director agent (src, tests, config)
 - `session_loader.py` — Main entry point
 - `.opencode/` — Opencode agent definitions
 - `opencode.json` — Opencode configuration

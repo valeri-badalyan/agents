@@ -40,6 +40,7 @@ V3 replaces Valeri as the default agent (`default_agent: v3`).
 | ferracho | Феррачо!!, ferracho, бизнес, SWOT, воронка |
 | halib | Халиб, halib, дизайн, палитра, лого |
 | aryubi | Арюби, aryubi, финансы, бюджет, P&L |
+| sandy | Сэнди, санди, sandy, музыка, сетлист, саундтрек, тональность |
 
 ---
 

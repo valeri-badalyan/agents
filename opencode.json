@@ -64,6 +64,10 @@
     "mika": {
       "description": "Mika — весёлый IT/интернет-провайдер. Тарифы, покрытие, диагностика, подключение RU/EN/HY. Use when user writes мика or mika.",
       "mode": "subagent"
+    },
+    "sandy": {
+      "description": "Sandy — музыкальный директор. Подбор музыки под настроение/сцену, сетлисты, тональности, репетиции, саундтрек-брифы RU/EN. Use when user writes сэнди, санди or sandy.",
+      "mode": "subagent"
     }
   }
 }

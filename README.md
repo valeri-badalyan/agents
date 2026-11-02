@@ -38,6 +38,7 @@ python session_loader.py
 | [Halib](./halib/) | Дизайнер — концепты, палитры, типографика, макеты, лого, аудит — trigger: Халиб / халиб / halib | Python | Active |
 | [Aryubi](./aryubi/) | Финансист — бюджет, кэшфлоу, P&L, инвестиции — trigger: Арюби / арюби / aryubi | Python | Active |
 | [Mika](./mika/) | Весёлый провайдер — тарифы, покрытие, диагностика, подключение — trigger: мика / mika | Python | Active |
+| [Sandy](./sandy/) | Музыкальный директор — подбор музыки, сетлисты, тональности, репетиции, брифы — trigger: сэнди / санди / sandy | Python | Active |
 
 ---
 

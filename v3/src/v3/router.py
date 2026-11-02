@@ -32,10 +32,12 @@ class Router:
             r"феррачо!!|феррачо|ferracho": ["ferracho"],
             r"халиб|halib": ["halib"],
             r"арюби|aryubi": ["aryubi"],
+            r"сэнди|санди|sandy": ["sandy"],
             r"jouli|джоули": ["jouli"],
             r"leo-davinci|лео|да винчи|davinci": ["leo-davinci"],
             r"omar-hayam|омар|хаяма|omar|hayam": ["omar-hayam"],
             # --- domain keywords ---
+            r"музык|music|сетлист|setlist|плейлист|playlist|саундтрек|soundtrack|аранжиров|arrang|репетици|rehears|\bbpm\b|тональност|оркестр|orchestra|джингл|jingle": ["sandy"],
             r"перевод|переведи|translate|translation|language|язык|interpret|транскрипц|диалект|акцент": ["jouli"],
             r"3d|сцена|scene|render|рендер|illustration|иллюстрац|asset|модель|blender|освещение|lighting": ["leo-davinci"],
             r"story|стори|история|сюжет|character|персонаж|world|world-building|мир|dialogue|диалог|сценарий|plot|narrative|герой|фракци|роман|квест": ["omar-hayam"],

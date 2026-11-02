@@ -31,7 +31,8 @@ def test_router_explicit_triggers(tmp_path: Path) -> None:
     """Explicit name triggers route correctly."""
     registry = _make_registry(
         tmp_path,
-        ["jouli", "zhanel", "marika", "ferracho", "halib", "aryubi", "olinho", "messi", "enrique"],
+        ["jouli", "zhanel", "marika", "ferracho", "halib", "aryubi", "olinho", "messi", "enrique",
+         "sandy"],
     )
     router = Router(registry)
 
@@ -42,18 +43,20 @@ def test_router_explicit_triggers(tmp_path: Path) -> None:
     assert router.route_task("Халиб, нужна палитра") == "halib"
     assert router.route_task("Арюби, посчитай бюджет") == "aryubi"
     assert router.route_task("Анкара Месси, разбери тактику") == "messi"
+    assert router.route_task("Сэнди, собери сетлист") == "sandy"
 
 
 def test_router_domain_keywords(tmp_path: Path) -> None:
     """Domain keywords route to specialists."""
     registry = _make_registry(
-        tmp_path, ["leo-davinci", "omar-hayam", "zhanel", "marika", "halib", "aryubi"]
+        tmp_path, ["leo-davinci", "omar-hayam", "zhanel", "marika", "halib", "aryubi", "sandy"]
     )
     router = Router(registry)
 
     assert router.route_task("Create a 3D scene with render") == "leo-davinci"
     assert router.route_task("Напиши сюжет и персонажа") == "omar-hayam"
     assert router.route_task("Нужна маркетинг стратегия") == "zhanel"
+    assert router.route_task("Подбери музыку для ролика") == "sandy"
 
 
 def test_router_route_all_multi(tmp_path: Path) -> None:
