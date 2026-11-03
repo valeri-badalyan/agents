@@ -1,6 +1,6 @@
 @ card | Глава 3. Говорящий муравей | Chapter 3. The Talking Ant
 
-@ kitchen happy | A=640 |
+@ kitchen happy | A=640, G=900 hidden |
 N | Утро. Антон проснулся бодрым, как никогда в жизни. Он даже не опоздал. Это было первое чудо. | Morning. Anton woke up more refreshed than ever in his life. He wasn't even late. That was the first miracle. | A^
 A | Какой прекрасный день! Сейчас сделаю бутерброд. Огромный. Королевский бутерброд! | What a beautiful day! I'll make a sandwich. A huge one. A royal sandwich! | A:up notes@A
 A | Режем хлеб... аккуратно... ай! | Cutting the bread... carefully... ouch! | sfx=ouch A! fx=oops@A

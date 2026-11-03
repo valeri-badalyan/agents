@@ -1,0 +1,54 @@
+@ card | Глава 10. Тапок в ночи | Chapter 10. Slipper in the Night
+
+@ lab lair | S=640, K=-200 hidden, B=1450 hidden, T=1500 hidden, G=-200 hidden, A=420 suit hidden | night
+N | Ночь. Секретный институт. Профессор Квасов работал допоздна. Он пытался понять, что случилось с курьером, который упал в чан. | Night. The secret institute. Professor Kvasov was working late. He was trying to figure out what had happened to the courier who fell into the vat. |
+S | Сто процентов концентрата... мгновенная регенерация... Этот юноша должен быть... неубиваемым. Хм. Интересно, как у него дела. | One hundred percent concentrate... instant regeneration... That young man must be... indestructible. Hmm. I wonder how he's doing. | S:cross
+S | Надеюсь, он не стал супергероем. Супергерои всегда плохо кончают. Им вечно падают на голову пианино. | I hope he hasn't become a superhero. Superheroes always end badly. Pianos keep falling on their heads. | S:point
+~ 2 | | | sfx=bzz K:show K>350
+K | Добрый вечер, профессор. Можно к вам? Я на минуточку. Хотела кое-что одолжить. | Good evening, professor. May I come in? Just for a minute. I want to borrow something. | K:wave
+S | Кто вы? Как вы сюда попали? Здесь секретный институт! | Who are you? How did you get in? This is a secret institute! |
+K | У вас на двери огромная вывеска, дорогой. Очень секретно. | There's a giant sign on your door, darling. Very secret. |
+~ 1.5 | | | B:show T:show B>980 T>800 sfx=boom shake
+B | Профессор Квасов! Вы пойдёте с нами! Лиге Вредителей нужен ваш выдающийся мозг! | Professor Kvasov! You're coming with us! The League of Pests needs your brilliant brain! | B:point
+S | Мой мозг не продаётся! Он работает только на науку! И немного на кроссворды! | My brain is not for sale! It works only for science! And a little for crosswords! | S! S:up
+T | Тогда мы его не купим. Мы его просто возьмём. Вместе с вами. Мешок! | Then we won't buy it. We'll just take it. Along with you. The sack! | T>700
+~ 1.5 | | | S! S^ fx=aaa@S sfx=whoosh
+N | Профессор сопротивлялся отважно. Он бросил в злодеев пробиркой, книгой и недоеденным бутербродом. | The professor resisted bravely. He threw a test tube, a book, and a half-eaten sandwich at the villains. | fx=pow@T sfx=pop
+T | Ай! Бутерброд с ананасом! Это ещё хуже, чем пробирка! | Ouch! A pineapple sandwich! That's even worse than the test tube! | T!
+~ 1.5 | | | S:hide fx=bonk@S sfx=trip
+B | Профессор упакован! Забираем и регенерин! Весь чан! | The professor is packed! Take the Regenerin too! The whole vat! | B:up
+G | Стоп-стоп-стоп! Куда это вы собрались? | Stop, stop, stop! Where do you think you're going? | G=-200 G>250 G:show
+~ 1.5 | | | A:fall sfx=land shake
+A | Энтмен на месте! Барон, отпусти профессора! | Antman is here! Baron, let the professor go! | A:up
+B | Опять ты?! Как ты узнал?! | You again?! How did you know?! |
+A | Гоша услышал жужжание. У муравьёв отличный слух. Ну, почти. | Gosha heard the buzzing. Ants have great hearing. Well, almost. |
+G | У нас вообще нет ушей. Но мы чувствуем вибрации. Особенно злодейские. | We don't even have ears. But we sense vibrations. Especially evil ones. | G:point
+K | Какой милый муравьишка. Так бы и съела. Если бы не была на диете. | What a cute little ant. I could just eat him. If I weren't on a diet. | K:point
+B | Доктор Тапок! Время для особенного тапка! | Doctor Slipper! Time for the special slipper! | B:point
+T | Тапко-дротикомёт заряжен! Девяносто процентов точности! | The Slipper Dart Blaster is loaded! Ninety percent accuracy! | T:up sfx=zap
+A | Ха! Стреляйте! Меня ничто не берёт! Я неуязвимый! | Ha! Go ahead and shoot! Nothing can hurt me! I'm invulnerable! | A:up
+G | Антон, может, не надо так говорить? Каждый раз, когда ты так говоришь... | Anton, maybe don't say that? Every time you say that... | G! sweat@G
+~ 1 | | | dart@A sfx=dart
+A | Ай. Укольчик. Подумаешь. Сейчас заживёт. | Ow. A little prick. No big deal. It'll heal in a second. | A:cross
+~ 2 | | | A! sweat@A
+A | Сейчас... заживёт... Почему не заживает? Гоша, почему не заживает?! | Any second... now... Why isn't it healing? Gosha, why isn't it healing?! | A! A:up
+B | Потому что это антирегенерин, жучок! Пробная партия! Сделано вручную! | Because it's Anti-Regenerin, little bug! A test batch! Handmade! | B^ fx=wow@B
+T | Я делал его в кастрюле. В той же, где варю пельмени. | I made it in a saucepan. The same one I boil dumplings in. | T:point
+A | Пельменный антирегенерин. Это самое обидное поражение в истории. | Dumpling Anti-Regenerin. This is the most humiliating defeat in history. |
+B | Лига! Уходим! Профессор наш! Регенерин наш! А ты, жучок, теперь самый обычный! | League! Let's go! The professor is ours! The Regenerin is ours! And you, little bug, are now completely ordinary! | B>1500 T>1500 K>1500 sfx=boom flash
+A | Стойте! | Wait! | A>900
+~ 1 | | | A_ sfx=trip fx=bonk@A
+A | Ой-ой-ой. Больно. По-настоящему больно. И... не проходит. | Ow, ow, ow. That hurts. It really hurts. And... it's not going away. | A~ A!
+G | Антон! Ты как? | Anton! Are you okay? | G>820
+A | Гоша... я больше не заживаю. Я опять обычный. | Gosha... I don't heal anymore. I'm ordinary again. | A:cross
+N | В ту ночь Энтмен впервые за много дней почувствовал боль. Синяк на коленке. Шишку на лбу. И что-то ещё, гораздо больнее. Где-то внутри. | That night, for the first time in many days, Antman felt pain. A bruise on his knee. A bump on his forehead. And something else, much more painful. Somewhere inside. |
+
+@ street sad | A=-150 casual, G=-100 | night
+~ 2 | | | A>500 G>380
+A | Шишка. Настоящая шишка. Я уже забыл, какие они бывают. Они, оказывается, болят. И долго. | A bump. A real bump. I'd forgotten what those were like. Turns out they hurt. For a long time. | A:cross
+G | Обычно неделю. Можно приложить что-нибудь холодное. Например, пельмени. Ой. Прости. Плохая шутка. | Usually a week. You can put something cold on it. Like dumplings. Oops. Sorry. Bad joke. | G:cross
+A | Нет, смешно. Только смеяться больно. | No, it's funny. Laughing just hurts. |
+A | Гоша, я ведь даже не герой. Я был героем, потому что мне было не больно. А теперь больно. И я хочу домой. Под одеяло. | Gosha, I'm not even a hero. I was a hero because nothing hurt. Now it hurts. And I want to go home. Under a blanket. |
+G | Антон... | Anton... |
+A | Пойдём домой, Гоша. Город обойдётся без Энтмена. Он и раньше обходился. | Let's go home, Gosha. The city will manage without Antman. It always did before. | A>1500
+N | Город, может быть, и обходился. Но очень скоро ему понадобится герой. Любой. Даже с шишкой. | Maybe the city did manage before. But very soon it would need a hero. Any hero. Even one with a bump. | sfx=spray

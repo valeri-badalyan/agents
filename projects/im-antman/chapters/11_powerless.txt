@@ -1,0 +1,72 @@
+@ card | Глава 11. Без суперсилы | Chapter 11. Powerless
+
+@ home sad | A=450 casual, G=640 |
+N | Прошло два дня. Антон не выходил из дома. Он лежал под одеялом, ел печенье и смотрел грустные фильмы про пингвинов. | Two days passed. Anton didn't leave the house. He lay under a blanket, ate cookies, and watched sad movies about penguins. | A:cross
+A | Смотри, Гоша. Пингвин упал. И встал. Сам. Без всякого регенерина. Молодец, пингвин. | Look, Gosha. The penguin fell. And got up. By himself. No Regenerin at all. Good job, penguin. |
+G | Антон, по телевизору новости. Ты должен это увидеть. | Anton, the news is on. You need to see this. | G:point
+H | Срочные новости! Лига Вредителей захватила городской водопровод! Барон Дихлофос угрожает добавить в воду антимуравьиный яд! | Breaking news! The League of Pests has seized the city waterworks! Baron Bugspray threatens to put anti-ant poison in the water! |
+B | Жители Муравейска! Если до завтра вы не отдадите мне ключ от города, каждый кран будет пахнуть химией! И лавандой! | Citizens of Anthill Falls! If you don't hand me the key to the city by tomorrow, every faucet will smell like chemicals! And lavender! |
+H | Полиция бессильна. Энтмен пропал. Город в опасности! | The police are powerless. Antman is missing. The city is in danger! |
+A | Энтмен не пропал. Энтмен лежит под одеялом. И ему грустно. | Antman isn't missing. Antman is lying under a blanket. And he's sad. | A:cross
+G | Антон! Вставай! Ты нужен городу! | Anton! Get up! The city needs you! | G^ G:up
+A | Городу нужен неуязвимый герой. А я уязвимый. Я вчера ударился мизинцем о тумбочку и плакал двадцать минут. | The city needs an invulnerable hero. And I'm vulnerable. Yesterday I stubbed my little toe on the nightstand and cried for twenty minutes. |
+G | Все плачут, когда бьются мизинцем. Это закон природы. Даже муравьи. А у нас шесть мизинцев! | Everyone cries when they stub their little toe. It's a law of nature. Even ants. And we have six little toes! |
+~ 1.5 | | | sfx=ding
+M | Антоша! Открывай! Это мама! Я знаю, что ты дома! Я слышу, как ты грустно жуёшь печенье! | Tony! Open up! It's Mom! I know you're home! I can hear you sadly chewing cookies! |
+
+@ home sad | A=450 casual, G=640, M=-200 |
+~ 1.5 | | | M>820
+M | Ну-ка, посмотри на меня. Почему глаза красные? Почему шишка на лбу? Почему печенье в волосах? | Let me look at you. Why are your eyes red? Why is there a bump on your forehead? Why are there cookies in your hair? | M:point
+A | Мам... Я должен тебе кое-что сказать. Энтмен — это я. | Mom... I have to tell you something. Antman is me. |
+M | Сынок. Я знаю. | Sweetie. I know. | M:cross
+A | Знаешь?! Откуда?! | You know?! How?! | A^ fx=wow@A
+M | Я сшила костюм своими руками. По твоим меркам. И ты единственный человек в мире, который падает с таким звуком. | I sewed that costume with my own hands. To your measurements. And you're the only person in the world who falls with that particular sound. | M:point
+G | Она права. У тебя очень узнаваемый звук падения. Как мешок с картошкой, который удивился. | She's right. Your falling sound is very recognizable. Like a sack of potatoes that's surprised. |
+M | Ой. Муравей говорит. Значит, это был не телевизор. Ну ладно. Здравствуйте, муравей. | Oh. The ant talks. So it wasn't the TV. Well, all right. Hello, Mister Ant. | M:wave
+G | Здравствуйте! Меня зовут Гоша. Спасибо за костюм. Отличная строчка. | Hello! My name's Gosha. Thanks for the costume. Excellent stitching. | G:wave
+A | Мам, у меня больше нет суперсилы. Её забрали злодеи. Каким-то пельменным уколом. Я теперь обычный. | Mom, I don't have my superpower anymore. The villains took it. With some dumpling-pot injection. I'm ordinary now. |
+M | Антоша. Ты всегда был обычным. Ты падал, вставал и шёл дальше. Ещё до всяких чанов. | Tony. You were always ordinary. You fell, got up and kept going. Long before any vats. | M:point
+M | Помнишь, как ты учился кататься на велосипеде? Сорок раз упал. Сорок один раз встал. Без всякого регенерина. | Remember when you learned to ride a bike? You fell forty times. You got up forty-one times. No Regenerin at all. |
+A | Сорок один? А почему не сорок? | Forty-one? Why not forty? |
+M | Один раз ты встал просто так. Для красоты. | Once you got up just for the fun of it. For style. | hearts@M
+A | Мам... | Mom... |
+M | Супергероем тебя сделала не жидкость, сынок. Ты просто наконец перестал бояться падать. А это у тебя никто не отнимет. Никаким уколом. | It wasn't the liquid that made you a superhero, sweetie. You just finally stopped being afraid of falling. And no one can take that away from you. No injection can. | M:up
+G | И шапку надень. Это я от себя добавил. | And wear a hat. That one's from me. |
+A | Капитан Петрович говорил то же самое. Геройство — не про то, что тебе не больно. А про то, что ты делаешь, когда больно. | Captain Petrovich said the same thing. Being a hero isn't about not getting hurt. It's about what you do when it hurts. | A:up
+A | Я понял. Теперь я понял! Гоша, мама — мы идём спасать город! | I get it. Now I finally get it! Gosha, Mom — we're going to save the city! | A^ sfx=fanfare
+M | Я не иду. У меня давление. Но я приготовлю вам бутерброды в дорогу. Героям нужно питаться. | I'm not going. My blood pressure. But I'll make you sandwiches for the road. Heroes need to eat. |
+~ 1.5 | | | sfx=ding
+L | Антон! Это Лена! Открой, пожалуйста! Это срочно! | Anton! It's Lena! Please open up! It's urgent! |
+
+@ home romance | A=450 casual, G=640, M=850, L=-200 |
+~ 1.5 | | | L>300
+L | Антон, прости, что так поздно. Мне нужна помощь. Я знаю, где прячется Лига Вредителей! | Anton, sorry it's so late. I need help. I know where the League of Pests is hiding! | L:point
+A | Знаешь?! Как? | You do?! How? |
+L | Мадам Москитка ведёт блог. «Сто способов укусить красиво». Она выложила селфи. А на фоне — фабрика «Красный клопик»! | Madame Mosquito runs a blog. A Hundred Ways to Bite Beautifully. She posted a selfie. And in the background — the Red Bedbug factory! | L:up
+G | Злодеи и соцсети. Каждый раз одна и та же ошибка. | Villains and social media. The same mistake every time. | G:cross
+L | Только я не знаю, как найти Энтмена. Он исчез. А ты всё время бегаешь по городу. Может, ты... | I just don't know how to find Antman. He's vanished. And you're always running around town. Maybe you... |
+A | Лена. Мне нужно тебе кое-что сказать. Только не смейся. | Lena. I need to tell you something. Please don't laugh. |
+~ 2 | | | A:suit flash sfx=fanfare
+A | Энтмен — это я. Без суперсилы. С шишкой. Но это я. | Antman is me. No superpowers. With a bump. But it's me. | A:cross
+L | Ты?! | You?! | L^ fx=wow@L
+L | Подожди. Тот, кто прыгнул на Барона под ядовитое облако... это был ты? Человек, который рассказывал мне про голубя с пончиком? | Wait. The one who jumped at the Baron through a poison cloud... that was you? The guy who told me about the pigeon with the donut? | L:point
+A | Голубь съел целый пончик. Это до сих пор правда. | The pigeon ate a whole donut. That's still true. |
+L | Антон... это самое смешное и самое смелое, что я слышала. Одновременно. | Anton... that's the funniest and bravest thing I've ever heard. At the same time. | hearts@L
+M | Ой, какие хорошие. Я, пожалуй, пойду на кухню. Сделаю бутерброды. Много бутербродов. | Oh, look at them. I think I'll go to the kitchen. Make sandwiches. Lots of sandwiches. | M>1500 hearts@M
+G | И мне. С сахаром. | And one for me. With sugar. |
+L | Но как ты будешь драться без суперсилы? Их трое. У них тапки, облака и жало. | But how will you fight without superpowers? There are three of them. They have slippers, clouds and a stinger. | L:cross
+A | Не знаю. Но у меня есть план. Ну, половина плана. Ну, начало половины плана. | I don't know. But I have a plan. Well, half a plan. Well, the beginning of half a plan. |
+G | У меня есть вторая половина! Антон, сколько муравьёв живёт в нашем городе? | I've got the other half! Anton, how many ants live in our city? | G^
+A | Не знаю. Тысячи? | No idea. Thousands? |
+G | Миллионы. И они все очень злы на Барона. Он опрыскал их пикник. Самое святое. | Millions. And they're all very angry at the Baron. He sprayed their picnic. That's sacred. | G:up
+A | Гоша, ты гений. Ты можешь их позвать? | Gosha, you're a genius. Can you call them? |
+G | Я могу им написать. На муравьином. Сорок слов для «сахар» и одно для «в атаку». | I can send them a message. In Ant. Forty words for sugar and one for attack. | G:point
+N | И тут Антону позвонил человек, от которого он меньше всего ждал помощи. | And then Anton got a call from the last person he expected help from. | sfx=ding
+O | Мурашов! Я всё знаю! Лена позвонила в пиццерию! Значит, ты и есть этот Энтмен?! | Murashov! I know everything! Lena called the pizzeria! So you're this Antman?! |
+A | Шеф, простите. Да. Это я. Можно мне не идти в Антарктиду? | Boss, I'm sorry. Yes. It's me. Can I please not go to Antarctica? |
+O | Какая Антарктида! Злодеи заказали пиццу на фабрику! Двадцать пицц! Им нужен курьер! Понимаешь, что это значит?! | Forget Antarctica! The villains ordered pizza to the factory! Twenty pizzas! They need a delivery guy! Do you understand what that means?! |
+A | Что они проголодались? | That they're hungry? |
+O | Что ты войдёшь туда через главную дверь! С пиццей! Как самый обычный курьер! Это лучший план в истории! | That you'll walk in through the front door! With pizza! Like a completely ordinary delivery guy! It's the best plan in history! |
+A | Шеф... вы гений. | Boss... you're a genius. |
+O | Я знаю. Только пиццу не урони. Двадцать пицц! Это двадцать пицц, Мурашов! | I know. Just don't drop the pizza. Twenty pizzas! That's twenty pizzas, Murashov! |
+A | Энтмен — на задание! То есть курьер Мурашов — на доставку! | Antman — on a mission! I mean, delivery guy Murashov — on a delivery! | A:up sfx=fanfare

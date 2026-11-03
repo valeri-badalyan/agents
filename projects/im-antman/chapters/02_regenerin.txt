@@ -42,7 +42,7 @@ N | Но Антон уже убежал. А в его кармане, мокры
 
 @ street sad | A=-150 | night
 A | Так. Без паники. Я упал в секретную жидкость. Свечусь. Пиццу отдал бесплатно. Шеф меня убьёт. Нормальный вечер. | Okay. No panic. I fell into a secret liquid. I'm glowing. I gave the pizza away for free. My boss will kill me. A normal evening. | A>600 A*
-G | Апчхи! | Achoo! | G:hide
+G | Апчхи! | Achoo! |
 A | Будь здоров. | Bless you. |
 ~ 1 | | | A! sweat@A
 A | Стоп. Кто это сказал? Тут никого нет. Я слышу голоса. Отлично. Теперь ещё и голоса. | Wait. Who said that? Nobody's here. I'm hearing voices. Great. Now there are voices too. | A:cross

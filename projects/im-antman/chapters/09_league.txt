@@ -1,0 +1,56 @@
+@ card | Глава 9. Лига Вредителей | Chapter 9. The League of Pests
+
+@ lair lair | B=700, T=1000, K=-200 |
+N | Старая фабрика «Красный клопик». Двадцать лет здесь никто не работал. А теперь здесь работало зло. По вторникам и четвергам. | The old Red Bedbug factory. No one had worked here for twenty years. Now evil worked here. On Tuesdays and Thursdays. |
+B | Коллеги! Злодеи! Вредители! Объявляю первое заседание Лиги Вредителей открытым! | Colleagues! Villains! Pests! I declare the first meeting of the League of Pests open! | B:up sfx=boom
+T | Ура. А печеньки будут? Мне обещали печеньки. | Hooray. Will there be cookies? I was promised cookies. | T:up
+B | Доктор Тапок, печеньки после повестки дня! | Doctor Slipper, cookies come after the agenda! | B:point
+T | Тогда я голосую за то, чтобы повестка дня была короткой. | Then I vote for a short agenda. | T:cross
+N | Доктор Тапок. Бывший мастер обувной фабрики. Изобретатель тапка-бумеранга, тапка-ракеты и тапка, который сам находит тараканов. Ненавидит всё, что ползает. | Doctor Slipper. Former foreman of a shoe factory. Inventor of the boomerang slipper, the rocket slipper, and the slipper that finds cockroaches on its own. Hates everything that crawls. |
+T | Особенно сороконожек. Сорок ног! Зачем кому-то сорок ног? Это хвастовство! | Especially centipedes. Forty legs! Why does anyone need forty legs? That's just showing off! | T! T:point
+~ 2 | | | sfx=bzz K>380
+K | Простите за опоздание, мальчики. Пробки. На небе. Ужасные пробки из голубей. | Sorry I'm late, boys. Traffic. In the sky. Terrible pigeon traffic. | K:wave
+B | Мадам Москитка! Королева укусов! Наконец-то! | Madame Mosquito! Queen of bites! At last! | B:up
+N | Мадам Москитка. Наполовину женщина, наполовину комар. Целиком неприятная. Любит кровь, ночные полёты и громко жужжать над ухом. | Madame Mosquito. Half woman, half mosquito. Completely unpleasant. Loves blood, night flights, and buzzing loudly right by your ear. | sfx=bzz
+K | Я принесла подарок. Капельку крови. Крови Энтмена. Я попробовала её на телешоу. | I brought a present. A tiny drop of blood. Antman's blood. I tasted it on the TV show. | K:point
+B | Ну и как? Какая она на вкус? | And? What did it taste like? |
+K | Как газировка, дорогой. С привкусом регенерина. Этот мальчик упал в чан у профессора Квасова. Я узнала этот вкус. | Like soda, darling. With a hint of Regenerin. That boy fell into Professor Kvasov's vat. I'd know that flavor anywhere. | K:up
+B | Регенерин! Так вот откуда его сила! | Regenerin! So that's where his power comes from! |
+T | Значит, если взять регенерин и сделать наоборот... | So if we take Regenerin and make it the other way around... | T:point
+B | Мы получим антирегенерин! Вещество, которое отключит его суперсилу! | We get Anti-Regenerin! A substance that will switch off his superpower! | B^ fx=wow@B sfx=fanfare
+K | А потом? | And then? |
+B | А потом мы опрыскаем город! Растопчем всех муравьёв! И никто нас не остановит! | And then we spray the city! Stomp every ant! And nobody will stop us! | B:up shake sfx=boom
+T | И печеньки. Не забудь про печеньки. | And cookies. Don't forget the cookies. |
+B | Да! И печеньки! Голосуем! Кто за зло? | Yes! And cookies! Let's vote! All in favor of evil? | B:up
+~ 1.5 | | | T:up K:up B:up sfx=ding
+B | Единогласно! Зло победило! Демократическим путём! | Unanimous! Evil wins! Democratically! | B^ fx=yay@B
+
+@ lair lair | B=640, T=960, K=320 |
+N | Но был один вопрос. Как сделать антирегенерин, если никто из злодеев не учился химии? | But there was one problem. How do you make Anti-Regenerin when none of the villains ever studied chemistry? |
+T | Я учился! Два года! Потом меня выгнали за то, что я взорвал кабинет. | I studied! For two years! Then they kicked me out for blowing up the classroom. | T:up
+B | Это не учёба. Это диверсия. | That's not studying. That's sabotage. | B:cross
+K | Нам нужен профессор Квасов. Он изобрёл регенерин. Он и сделает антирегенерин. | We need Professor Kvasov. He invented Regenerin. He'll make the Anti-Regenerin. | K:point
+B | Квасов не станет помогать злодеям. Он же учёный. Они все за добро. Скучные люди. | Kvasov won't help villains. He's a scientist. They're all on the side of good. Boring people. |
+K | А если вежливо попросить? Сеткой. И мешком. Ночью. | What if we ask nicely? With a net. And a sack. At night. |
+B | Похищение! Великолепно! Мадам, вы гений! | A kidnapping! Magnificent! Madame, you are a genius! | B^ hearts@B
+K | Я знаю, дорогой. Я знаю. | I know, darling. I know. | K:wave
+T | А Энтмен? Он же придёт спасать. Герои всегда приходят спасать. | And Antman? He'll come to the rescue. Heroes always come to the rescue. |
+B | Пусть приходит! Для него у нас будет особенный тапок. Доктор, покажите! | Let him come! We'll have a special slipper for him. Doctor, show them! | B:point
+T | Тапко-дротикомёт! Стреляет дротиками с антирегенерином. Точность — девяносто процентов! Остальные десять — в меня. | The Slipper Dart Blaster! Fires darts of Anti-Regenerin. Ninety percent accuracy! The other ten percent hit me. | T:up flash sfx=zap
+~ 1 | | | T_ fx=oops@T sfx=dart
+T | Это были десять процентов. | That was the ten percent. | T~
+B | Тренируйтесь, доктор. Тренируйтесь. Завтра ночью — операция «Тапок в ночи»! | Practice, doctor. Practice. Tomorrow night — Operation Slipper in the Night! | B:up shake
+K | Какое красивое название. Почти романтичное. | What a lovely name. Almost romantic. | hearts@K
+B | Злодейство — это и есть романтика, мадам. Ха-ха-ха-ха! | Villainy is romance, madame. Ha-ha-ha-ha! | B:up sfx=boom
+T | Ха-ха-ха! А печеньки? | Ha-ha-ha! And the cookies? |
+B | Ха-ха-ха! Печеньки на столе! | Ha-ha-ha! The cookies are on the table! |
+K | Ха-ха-ха! Я на диете. Я пью только кровь. И кефир. | Ha-ha-ha! I'm on a diet. I only drink blood. And kefir. |
+
+@ home happy | A=450, G=620 | night
+N | А в это время Энтмен праздновал. У него был первый в жизни фан-клуб. Из трёх человек. Включая маму. | Meanwhile, Antman was celebrating. He had his very first fan club. Three members. Including his mom. | A:up notes@A
+G | Антон. Мне не нравится эта тишина. Злодей сбежал. Комариха тебя укусила. Что-то готовится. | Anton. I don't like this quiet. The villain got away. The mosquito lady bit you. Something's coming. | G:point
+A | Гоша, расслабься. Я непобедим. Меня нельзя ранить. Что может пойти не так? | Gosha, relax. I'm invincible. I can't get hurt. What could possibly go wrong? | A:cross
+G | Каждый раз, когда ты говоришь эту фразу, всё идёт не так. Абсолютно всё. | Every time you say that, everything goes wrong. Absolutely everything. |
+A | Это совпадение. Спокойной ночи, Гоша. | That's a coincidence. Good night, Gosha. | zzz@A
+G | Спокойной ночи. Я буду дежурить. Муравьи не спят. Ну, спят, но очень мало. | Good night. I'll keep watch. Ants don't sleep. Well, they do, but not much. | G:cross
+~ 3 | | | zzz@A zzz@G

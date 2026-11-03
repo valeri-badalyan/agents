@@ -1,0 +1,70 @@
+@ card | Глава 13. Я Энтмен! | Chapter 13. I'm Antman!
+
+@ park happy | A=640 suit, G=760, C=1000, M=260, X1=120 | crowd
+~ 3 | | | sfx=cheer,fanfare notes@A
+N | Через неделю весь Муравейск собрался в парке. На самый большой пикник в истории города. Муравьи тоже были приглашены. Официально. | A week later, all of Anthill Falls gathered in the park. For the biggest picnic in the city's history. The ants were invited too. Officially. | ants
+C | Граждане! По решению мэрии, за спасение города, награждается Энтмен! Медалью «Золотой муравей»! | Citizens! By decision of City Hall, for saving the city, the award goes to Antman! The Golden Ant medal! | C:up
+~ 2 | | | flash sfx=ding,cheer A^ fx=yay@A
+A | Спасибо! Огромное спасибо! Но я хочу сказать... эта медаль не только моя. | Thank you! Thank you so much! But I want to say... this medal isn't only mine. | A:up
+A | Она Гоши, который не испугался Барона. Мамы, которая сшила костюм. Лены, которая нашла логово. Профессора, который сделал противоядие из холодильника. | It belongs to Gosha, who wasn't afraid of the Baron. To Mom, who sewed the costume. To Lena, who found the lair. To the professor, who made an antidote from his fridge. | A:point
+A | И шефа Бориса, который придумал лучший план в истории. И миллиону муравьёв, которые не побоялись щекотки. | And to Boss Boris, who came up with the best plan in history. And to the million ants who weren't afraid of tickling. | A:up ants
+G | Мы не боимся щекотки. Мы её создаём. | We aren't afraid of tickling. We cause it. | G^
+M | Это мой сын! Это мой сынок! Он в шапке! Видите, он в шапке! | That's my son! That's my boy! He's wearing a hat! See, he's wearing a hat! | M^ hearts@M
+X1 | Энтмен! Энтмен! Энтмен! | Antman! Antman! Antman! | X1:up sfx=cheer
+~ 2.5 | | | sfx=cheer A:up fx=yay@A
+
+@ pizzeria happy | O=850, A=380 casual, G=500 |
+N | Шеф Борис сдержал слово. | Boss Boris kept his word. |
+O | Мурашов. Вот твоя премия. Двойная. И ещё одна. Тройная получается. | Murashov. Here's your bonus. A double one. And another one. That makes it triple. | O:point sfx=ding
+A | Шеф! Спасибо! А пингвины? | Boss! Thank you! What about the penguins? |
+O | Пингвинам пиццу будет возить кто-нибудь другой. Ты теперь лицо компании. Наша новая реклама! | Someone else can deliver pizza to the penguins. You're the face of the company now. Our new ad! | O:up
+O | «Пицца "Мураш". Её доставляет настоящий герой. Иногда — вовремя». | Murash Pizza. Delivered by a real hero. Sometimes on time. | cap={ПИЦЦА «МУРАШ»|MURASH PIZZA} sfx=fanfare
+A | Шеф, это первая честная реклама в мире. | Boss, that's the first honest ad in the world. |
+O | Не привыкай. Иди работай. Двенадцать заказов. И осторожно на лестнице! | Don't get used to it. Get to work. Twelve orders. And careful on the stairs! | O:point
+A | Я всегда осторожен! | I'm always careful! | A>700
+~ 1 | | | A_ sfx=trip fx=bonk@A
+A | Почти всегда. | Almost always. | A~ A* sfx=boing
+
+@ lab happy | S=400, G=560, A=760 casual |
+S | Гоша, я провёл анализы. Регенерин в вас обоих теперь навсегда. Стабильный. Но есть побочный эффект. | Gosha, I ran the tests. The Regenerin in both of you is permanent now. Stable. But there's a side effect. | S:point
+A | Какой побочный эффект? | What side effect? |
+S | Волосы. Они будут расти очень быстро. Всю жизнь. | Hair. It will grow very fast. For the rest of your life. |
+~ 1.5 | | | A:hair=2.5 sfx=pop fx=wow@A
+G | Пустяки. Зато я теперь лаборант. Официально. С пропуском и зарплатой. Три крошки в день. | No big deal. And I'm a lab assistant now. Officially. With a badge and a salary. Three crumbs a day. | G:up
+S | И с ананасом по пятницам. Наука — это смелость! | And pineapple on Fridays. Science is courage! | S:up
+
+@ rooftop romance | A=520 casual hair=2.5, L=760, G=1100 hidden |
+N | А вечером Антон и Лена пошли на крышу. Смотреть на закат. Это было настоящее свидание. Первое. | And that evening, Anton and Lena went up to the roof. To watch the sunset. It was a real date. The first one. | hearts@A hearts@L
+L | Знаешь, я ведь написала статью. «Кто такой Энтмен». Но так её и не отправила. | You know, I wrote an article. Who Is Antman. But I never sent it. | L:point
+A | Почему? Это же сенсация. | Why not? It's a big story. |
+L | Потому что настоящая сенсация — это не человек, который не может пораниться. А человек, который продолжает идти, даже когда поранился. | Because the real story isn't a man who can't get hurt. It's a man who keeps going even after he gets hurt. |
+A | Это капитан тебе сказал? | Did the captain tell you that? |
+L | Нет. Это ты мне показал. | No. You showed me. | hearts@L
+~ 2 | | | hearts@A hearts@L notes@A
+A | Лена... можно я... то есть... может, мы... | Lena... can I... I mean... maybe we could... | A! sweat@A A:hair=3
+L | Антон, у тебя волосы растут прямо на глазах. | Anton, your hair is growing right before my eyes. |
+A | Это от волнения. И от регенерина. В основном от волнения. | That's from nerves. And the Regenerin. Mostly the nerves. |
+L | Мне нравится. Очень пышно. | I like it. Very fluffy. | L>600 hearts@L
+~ 2.5 | | | hearts@A hearts@L notes@L sfx=ding
+G | Ну наконец-то. Я думал, это будет длиться дольше, чем вся наша история. | Finally. I thought this would take longer than our entire story. | G=1100 G:show
+A | Гоша! Ты что тут делаешь?! | Gosha! What are you doing here?! | A^
+G | Я муравей. Мы везде. Это наш закат тоже. | I'm an ant. We're everywhere. This is our sunset too. | G:cross
+
+@ police villain | B=640, C=1000 |
+N | А в тюрьме Муравейска сидел Барон Дихлофос. Он пах лавандой. И у него был новый план. | And in the Anthill Falls jail sat Baron Bugspray. He smelled of lavender. And he had a new plan. |
+B | Ничего-ничего. Я ещё вернусь. Я изобрету новое облако. Ещё более ядовитое. С ароматом ванили! | That's fine, that's fine. I'll be back. I'll invent a new cloud. Even more poisonous. Vanilla scented! | B:up
+B | А пока... Ага! Таракан! Ну, иди сюда, малыш. Пшш! | But for now... Aha! A cockroach! Come here, little guy. Pssht! | B:point sfx=spray fx=pshh@B
+~ 1.5 | | | sfx=heal flash
+B | Что?! Он не падает! Он... светится зелёным?! Он отращивает новую ногу?! | What?! He's not falling over! He's... glowing green?! He's growing a new leg?! | B! sweat@B
+C | Похоже, кто-то из муравьёв поделился регенерином с соседями. Добро тоже бывает заразным, гражданин. | Looks like one of the ants shared the Regenerin with the neighbors. Good can be contagious too, citizen. | C:point
+B | Не-е-е-ет! | No-o-o-o! | B_ fx=aaa@B shake
+
+@ street happy | A=-150 suit hair=2, G=-100 |
+N | А Энтмен по-прежнему живёт в Муравейске. Доставляет пиццу. Спасает котиков. Падает. И всегда встаёт. | And Antman still lives in Anthill Falls. Delivers pizza. Rescues kitties. Falls down. And always gets back up. | A>560 G>440
+A | Гоша, как думаешь, что нас ждёт завтра? | Gosha, what do you think tomorrow will bring? |
+G | Тебя? Лестница, голубь и какая-нибудь подозрительная дверь. | For you? Stairs, a pigeon and some suspicious door. |
+A | Отлично. Я готов. Потому что я... | Great. I'm ready. Because I'm... | A:up
+~ 1 | | | A_ sfx=trip fx=bonk@A
+A | Я Энтмен! | I'm Antman! | A~ A^^ A* sfx=fanfare,heal fx=yay@A
+
+@ credits happy

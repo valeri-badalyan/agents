@@ -352,7 +352,23 @@ def main() -> None:
     ap.add_argument("--sheet", default=None)
     ap.add_argument("--only", type=int, default=None)
     ap.add_argument("--stats", action="store_true")
+    ap.add_argument("--check", action="store_true")
     a = ap.parse_args()
+    if a.check:
+        import re
+        for sc in load_script():
+            known = set(sc.cast)
+            for ln in sc.lines:
+                for tok in ln.acts:
+                    m = re.match(r"^(?:[a-z]+[=@])?.*?@?([A-Z]\d?)(?=[>=^_~!*:]|$)", tok)
+                    codes = re.findall(r"(?:^|@)([A-Z]\d?)(?=[>=^_~!*:]|$)", tok)
+                    for c in codes:
+                        if c not in known:
+                            log.warning("scene %d (%s): '%s' uses %s not in cast", sc.index, sc.bg, tok, c)
+                    _ = m
+                if ln.spk and ln.spk not in tts.VOICES["ru"]:
+                    log.warning("unknown speaker %s", ln.spk)
+        return
     langs = ["ru", "en"] if a.lang == "all" else [a.lang]
     for lang in langs:
         if a.stats:

@@ -1,0 +1,73 @@
+@ card | Глава 12. Двадцать пицц | Chapter 12. Twenty Pizzas
+
+@ street action | A=-150 casual, G=-100, L=-250 | night
+N | Ночь. Окраина города. По пустой улице шёл самый обычный курьер. С двадцатью пиццами. И очень необычным планом. | Night. The edge of town. Down an empty street walked a completely ordinary delivery guy. With twenty pizzas. And a very unusual plan. | A>560 G>440 L>300
+L | Я буду снимать всё на камеру. Если что-то пойдёт не так, весь город это увидит. | I'll film everything. If anything goes wrong, the whole city will see it. | L:point
+A | Если что-то пойдёт не так, лучше пусть не видит. Особенно мама. | If anything goes wrong, maybe it's better if nobody sees. Especially Mom. |
+G | Сообщение отправлено. Муравьи идут. Все муравьи города. Даже старенькие. Даже рыжие из соседнего района, а они вообще ни с кем не дружат. | Message sent. The ants are coming. Every ant in the city. Even the old ones. Even the red ants from the next district, and they don't get along with anyone. | G:up
+A | Хорошо. Тогда начинаем. Помни: я захожу, отвлекаю, ты открываешь клетку профессора. | Okay. Then let's begin. Remember: I go in, I distract them, you open the professor's cage. | A:point
+G | А ты что будешь делать? | And what will you be doing? |
+A | Падать. Я это умею лучше всех. | Falling. I'm the best at it. | A>1500 G>1500
+
+@ lair lair | B=900, T=1100, K=700, S=1180, A=-150 hidden, G=1100 hidden |
+N | В логове Лиги Вредителей шёл праздник. Злодеи готовились к захвату города. И ждали пиццу. | In the lair of the League of Pests, a party was going on. The villains were getting ready to take over the city. And waiting for pizza. | notes@B
+B | Завтра этот город будет наш! Ключ от города! Мэрия! Все пикники мира! | Tomorrow this city will be ours! The key to the city! City Hall! Every picnic in the world! | B:up
+T | А где пицца? Я заказал с ананасом. Чтобы помучить профессора. | Where's the pizza? I ordered pineapple. To torture the professor. | T:point
+S | Ананас на пицце — это наука! А вы — хулиганы! | Pineapple on pizza is science! And you are hooligans! | S! S:up
+K | Профессор, вы сделали ещё антирегенерина? Нам нужна большая партия. Целая цистерна. | Professor, have you made more Anti-Regenerin? We need a big batch. A whole tanker. | K:point
+S | Я сделал! Но специально неправильно. Если это выпить, то будет икота. Ха! Наука на стороне добра! | I made it! But wrong on purpose. If you drink it, you'll get hiccups. Ha! Science is on the side of good! |
+~ 1.5 | | | sfx=ding A:show A>420
+A | Доставка пиццы! Пицца «Мураш»! Двадцать штук! Кто заказывал? | Pizza delivery! Murash Pizza! Twenty of them! Who ordered? | A:up
+T | Наконец-то! Неси сюда, курьер! | Finally! Bring it here, delivery boy! | T:point
+B | Стоп. Этот курьер... какой-то знакомый. Где я видел эти лохматые волосы? | Wait. This delivery boy... looks familiar. Where have I seen that shaggy hair? | B:point A:hair=2
+A | Я? Вы меня с кем-то путаете. Я самый обычный курьер. Я даже не знаю, кто такой Энтмен. | Me? You've got me mixed up with someone. I'm a totally ordinary delivery guy. I don't even know who Antman is. | A!
+K | А я никогда не забываю вкус. Дай-ка ручку. | And I never forget a taste. Give me your hand. | K>560 sfx=bzz
+~ 1.5 | | | K:point sfx=bzz fx=oops@A
+K | Регенерин. Слабенький, но есть. Это он! Это Энтмен! | Regenerin. Weak, but it's there. It's him! It's Antman! | K^ K:up
+B | Так-так-так. Сам пришёл. Без суперсилы. С пиццей. Как мило. | Well, well, well. He came himself. No superpowers. With pizza. How sweet. | B:up
+A | Ага. Сам. С пиццей. И не один. | Yep. Myself. With pizza. And not alone. | A:point
+~ 2.5 | | | ants sfx=cheer shake
+N | И тогда через все щели, окна и вентиляцию в логово хлынули муравьи. Миллионы муравьёв. Самая большая армия в истории города. | And then, through every crack, window and vent, ants poured into the lair. Millions of ants. The biggest army in the city's history. | ants
+T | Муравьи! Везде муравьи! Они в моих тапках! Они в моих носках! Они щекочутся! | Ants! Ants everywhere! They're in my slippers! They're in my socks! They tickle! | T! T^ ants
+~ 1.5 | | | T^ T! fx=aaa@T ants sfx=whoosh
+T | Ха-ха-ха! Хватит! Ха-ха! Я боюсь щекотки! Я сдаюсь! Только перестаньте! Ха-ха-ха! | Ha-ha-ha! Stop it! Ha-ha! I'm ticklish! I give up! Just stop! Ha-ha-ha! | T_ ants
+N | Доктор Тапок выбыл из борьбы. Он лежал на полу и смеялся. Его тапки унесли муравьи. Говорят, они до сих пор используют их как лодки. | Doctor Slipper was out of the fight. He lay on the floor laughing. The ants carried off his slippers. They say the ants still use them as boats. |
+K | Ах так! Тогда я сама! Я выпью всю твою кровь, мальчик! До последней капельки! | Oh, is that so! Then I'll do it myself! I'll drink all your blood, boy! Down to the last drop! | K>520 sfx=bzz
+A | Мадам, у меня к вам предложение. Пицца. С чесноком. Двойная порция. | Madame, I have an offer for you. Pizza. With garlic. A double portion. | A:point
+K | Чеснок?! Только не чеснок! Комары не переносят чеснок! Это же все знают! | Garlic?! Not garlic! Mosquitoes can't stand garlic! Everyone knows that! | K! sweat@K
+A | Тогда — доставка! Лично в руки! | Then here's your delivery! Hand-delivered! | A>480 fx=splat@K sfx=splat
+K | Фу! Фу-фу-фу! Мой макияж! Мои крылышки! Я улетаю! Я ухожу из злодейства! Открою салон красоты! | Ew! Ew, ew, ew! My makeup! My little wings! I'm flying away! I quit villainy! I'll open a beauty salon! | K! K>1500 sfx=bzz
+G | Антон! Клетка открыта! Профессор свободен! | Anton! The cage is open! The professor is free! | G=1100 G:show G^
+S | Спасибо, муравей номер сорок семь! Я знал, что ты особенный! Ты всегда так внимательно смотрел! | Thank you, ant number forty-seven! I knew you were special! You always stared so closely! | S>1000 S:up
+G | Я Гоша. Но спасибо. | It's Gosha. But thank you. | G:wave
+
+@ lair action | A=420 casual, B=900, S=1080, G=1180, L=-200, C=-200 hidden |
+B | Хватит! Довольно! Ты испортил мой праздник, курьер! Пора закончить это раз и навсегда! | Enough! That's enough! You ruined my party, delivery boy! Time to end this once and for all! | B:up shake
+B | Включаю моё главное оружие! Дихлофос-три-тысячи! Самый большой баллон в мире! | Activating my ultimate weapon! The Bugspray Three Thousand! The biggest spray can in the world! | B:point sfx=boom flash
+~ 2 | | | cloud@A sfx=spray shake
+A | Кхе-кхе! Горло дерёт! Глаза слезятся! Это больно! По-настоящему больно! | Cough, cough! It burns my throat! My eyes are watering! It hurts! It really hurts! | A! cloud@A
+B | Конечно больно! Ты больше не заживаешь, жучок! Сдавайся! | Of course it hurts! You don't heal anymore, little bug! Give up! | B:up
+L | Антон! Уходи оттуда! | Anton! Get out of there! | L>200 L!
+A | Нет. Капитан был прав. Геройство — это не когда тебе не больно. Это когда больно — а ты всё равно идёшь. | No. The captain was right. Being a hero isn't when it doesn't hurt. It's when it hurts — and you keep going anyway. | A>620 A:up
+~ 1.5 | | | A>700 cloud@A A!
+B | Ещё облако! Ещё тапок! Ещё! | Another cloud! Another slipper! More! | slipper@A sfx_end=splat
+~ 1 | | | A_ fx=splat@A shake
+A | Я встаю. Слышишь, Барон? Я всё равно встаю. Медленно. Со скрипом. Но встаю. | I'm getting up. Hear that, Baron? I'm still getting up. Slowly. Creakily. But I'm getting up. | A~
+S | Юноша! Держите! Я синтезировал противоядие! Из регенерина, лимонада и чего-то, что было в холодильнике! | Young man! Catch! I synthesized an antidote! From Regenerin, lemonade and something I found in the fridge! | S:up sfx=whoosh
+~ 1 | | | flash sfx=pop fx=bulk@A
+A | На вкус как газировка. С пельменями. | Tastes like soda. With dumplings. |
+~ 2.5 | | | A* A:suit flash sfx=heal,fanfare fx=wow@A
+N | Суперсила вернулась. Но Антон уже знал главное: дело было вовсе не в ней. | The superpower came back. But Anton already knew the important thing: it had never been about the power. |
+A | Барон! Ты помнишь, как меня зовут? | Baron! Do you remember my name? | A:up
+B | Э-э... Таракан? Жучок? Средство от тараканов? | Uh... Cockroach? Little bug? Bug spray brand? | B! sweat@B
+A | Я Энтмен! | I'm Antman! | A^^ A>820 sfx=whoosh
+~ 1 | | | fx=pow@B sfx=boom shake B_
+~ 1 | | | boom@B sfx=boom flash
+B | Мой баллон... мой прекрасный баллон... Он лопнул! Теперь я пахну лавандой! Навсегда! | My can... my beautiful can... It popped! Now I smell like lavender! Forever! | B~ B!
+~ 2 | | | sfx=siren police C:show C>300
+C | Полиция! Всем стоять! Лига Вредителей, вы арестованы! За покушение на пикник и за плохой вкус! | Police! Nobody move! League of Pests, you are under arrest! For attacking a picnic and for bad taste! | C:point police
+B | Это несправедливо! Меня победил курьер! С пиццей! | This is unfair! I was beaten by a delivery boy! With pizza! | B! police
+C | Не курьер, гражданин. Герой. Я видел запись. Весь город видел запись. | Not a delivery boy, citizen. A hero. I saw the footage. The whole city saw the footage. | C:cross police
+L | Прямой эфир! Сто тысяч просмотров! Двести! Город смотрит на тебя, Антон! | Live stream! A hundred thousand views! Two hundred! The city is watching you, Anton! | L^ L:up
+C | Отличная работа, сынок. Знаешь, а шапку можешь не надевать. Ты заслужил. | Great work, son. You know what? You don't have to wear the hat. You've earned it. | C:point
+A | Спасибо, капитан. Но я всё-таки надену. Мама будет волноваться. | Thank you, captain. But I'll still wear it. Mom would worry. | A:up hearts@A

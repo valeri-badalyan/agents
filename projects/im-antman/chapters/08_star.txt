@@ -40,6 +40,35 @@ A | Ай! Меня кто-то укусил! Комар! В студии ком�
 K | Спасибо за автограф, Энтмен. Ещё увидимся. | Thanks for the autograph, Antman. See you soon. | K>1500 sfx=bzz
 G | Антон... мне не нравится эта тётя. У неё жало. Нормальные тёти без жала. | Anton... I don't like that lady. She has a stinger. Normal ladies don't have stingers. | G! sweat@G
 
+@ street action | A=-150 suit, G=-100, X1=900, X2=1100 | crowd
+N | После телешоу Энтмен стал знаменитостью. Его узнавали на улицах. Просили автографы. Иногда путали с пожарным гидрантом. | After the TV show, Antman became a celebrity. People recognized him on the street. Asked for autographs. Sometimes mistook him for a fire hydrant. | A>520 G>400 sfx=cheer
+X1 | Энтмен! Распишитесь, пожалуйста! Прямо на моей кепке! | Antman! Sign this, please! Right on my cap! | X1>700 X1:up
+A | Конечно! Как вас зовут? | Of course! What's your name? | A:point
+X1 | Вася. А можно ещё одну? Для бабушки. И для соседа. И для собаки. | Vasya. Can I get another one? For my grandma. And my neighbor. And my dog. | X1^
+A | Для собаки? | For your dog? |
+X1 | Она тоже ваша фанатка. Она лает, когда вас показывают по телевизору. | She's your fan too. She barks whenever you're on TV. | hearts@X1
+G | Она лает на всех. Я с ней знаком. Она лаяла и на меня. А я очень маленький. | She barks at everyone. I know her. She barked at me too. And I'm very small. | G:cross
+X2 | Энтмен! Помогите! У меня застряла машина! В луже! В огромной луже! | Antman! Help! My car is stuck! In a puddle! A huge puddle! | X2! X2:up
+A | Уже бегу! Лужи — мои старые враги! | On my way! Puddles are my old enemies! | A>1000 sfx=whoosh
+~ 1.5 | | | A! A:up sweat@A sfx=boing
+~ 1.5 | | | A^ fx=pow@A sfx=boom shake
+X2 | Получилось! Машина свободна! А вы... вы весь в грязи! | It worked! The car is free! And you're... you're covered in mud! | X2^ fx=yay@X2
+A | Грязь не заживает. Это единственное, что не заживает. Её надо стирать. | Mud doesn't heal. It's the only thing that doesn't heal. You have to wash it off. | A:cross
+G | Мама будет в восторге. Опять стирка. | Your mom will be thrilled. Laundry again. |
+N | Так прошла неделя. Энтмен снимал котов с деревьев. Помогал бабушкам. Ловил мячики, улетевшие на крыши. Падал. И вставал. | That's how the week went. Antman got cats down from trees. Helped grannies. Fetched balls stuck on roofs. Fell. And got back up. | A>300 sfx=cheer
+~ 1.5 | | | A^^ sfx=whoosh fx=wow@A
+~ 1 | | | A_ sfx=trip fx=bam@A
+~ 1.5 | | | A~ A* sfx=boing,heal
+~ 1.5 | | | A>800 A^ sfx=cheer fx=yay@A
+N | Город полюбил своего неуклюжего героя. Дети рисовали его на асфальте. Почему-то всегда лежащим. | The city fell in love with its clumsy hero. Kids drew him in chalk on the sidewalk. For some reason, always lying down. |
+A | Гоша, почему они рисуют меня лежащим? | Gosha, why do they always draw me lying down? |
+G | Рисуют то, что видят, Антон. Это честное искусство. | They draw what they see, Anton. It's honest art. | G:point
+X1 | Энтмен! А правда, что вы ничего не боитесь? | Antman! Is it true you're not afraid of anything? |
+A | Неправда. Я боюсь стоматологов, пауков и того, что меня узнает мама. | Not true. I'm afraid of dentists, spiders, and my mom recognizing me. |
+X2 | А злодеев? | And villains? |
+A | Злодеев пока не очень. Барон Дихлофос пахнет лавандой. Как можно бояться того, кто пахнет лавандой? | Villains, not so much yet. Baron Bugspray smells like lavender. How can you be afraid of someone who smells like lavender? | A:up
+G | Не говори так. Сглазишь. Злодеи всегда приходят, когда герой расслабился. Это закон жанра. | Don't say that. You'll jinx it. Villains always show up right when the hero relaxes. It's the law of the genre. | G! sweat@G
+
 @ pizzeria happy | O=850, A=380 |
 N | Тем временем в пиццерии шеф Борис придумал гениальный бизнес-план. | Meanwhile, at the pizzeria, Boss Boris came up with a brilliant business plan. |
 O | Мурашов! Ты видел Энтмена по телику? Это же золото! Нам нужен Энтмен для рекламы! | Murashov! Did you see Antman on TV? That's pure gold! We need Antman for an ad! | O:up
