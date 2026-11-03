@@ -1,0 +1,59 @@
+@ card | Глава 7. Барон Дихлофос | Chapter 7. Baron Bugspray
+
+@ park villain | X1=200, X2=380, X3=1100, B=1400 | crowd
+N | Воскресенье. Городской парк. Пикники, мячики, бутерброды. И муравьи. Много муравьёв. Самый счастливый день в году. | Sunday. The city park. Picnics, balls, sandwiches. And ants. Lots of ants. The happiest day of the year. | notes@X2
+X1 | Отличная погода! Передайте, пожалуйста, бутерброд с колбасой. | Lovely weather! Pass me a sausage sandwich, please. |
+X2 | Ой, сколько муравьёв! Ну ничего, они же маленькие. Им тоже надо кушать. | Oh, so many ants! Well, that's fine, they're tiny. They need to eat too. | ants
+~ 2.5 | | | sfx=spray shake B=1400 B>950
+B | Ха-ха-ха-ха! Маленькие?! Муравьи — это не маленькие! Муравьи — это враги цивилизации! | Ha-ha-ha-ha! Tiny?! Ants are not tiny! Ants are the enemies of civilization! | B:up
+X3 | Это кто? Аниматор? | Who's that? A party entertainer? |
+B | Я не аниматор! Я Барон Дихлофос! Повелитель яда! Гроза насекомых! Владелец трёх химчисток! | I'm not an entertainer! I am Baron Bugspray! Lord of poison! Terror of insects! Owner of three dry cleaners! | B:point fx=pshh@B sfx=spray
+B | Сегодня я опрыскаю этот парк! А завтра — весь город! Никаких муравьёв! Никаких пикников! Никаких бутербродов! | Today I'll spray this park! And tomorrow the whole city! No ants! No picnics! No sandwiches! | B:point cloud@X2 sfx=spray
+X2 | Кхе-кхе! Мои бутерброды! Они пахнут химией! | Cough, cough! My sandwiches! They smell like chemicals! | X2! X2>-200
+X1 | Спасайся кто может! | Run for your lives! | X1>-200 X3>1500
+B | Бегите, бегите! Ха-ха! Никто не остановит Барона Дихлофоса! | Run, run! Ha-ha! No one can stop Baron Bugspray! | B:up
+
+@ park villain | B=950, A=-200 suit, G=-200 |
+~ 1 | | | A:fall A=330 sfx=trip shake
+A | Стой, Барон! Я Энтмен! | Stop right there, Baron! I'm Antman! | A:up sfx=land
+B | Энтмен? Звучит как то, что я травлю по выходным. | Antman? Sounds like something I exterminate on weekends. |
+A | А ты звучишь как то, что стоит под раковиной у моей мамы. | And you sound like something under my mom's kitchen sink. | A:point
+B | Ты смеёшься над Бароном?! Получай облако! Ядовитое облако номер пять! С ароматом лаванды! | You dare mock the Baron?! Eat my cloud! Poison cloud number five! Lavender scented! | B:point cloud@A sfx=spray
+A | Кхе-кхе... невкусно. Совсем невкусно. Лаванда тут не помогает. Но... я уже здоров! | Cough, cough... tastes awful. Really awful. The lavender doesn't help. But... I'm already fine! | A! A* sfx_end=heal
+B | Что?! Это облако валит слона! Ну, то есть таракана. Очень большого таракана! | What?! That cloud could knock out an elephant! Well, a cockroach. A really big cockroach! | B!
+G | Антон, он перезаряжается! Атакуй! | Anton, he's reloading! Attack! | G=150 G:show G^
+A | Атакую! Энтмен-удар! | Attacking! Antman punch! | A>800
+~ 1 | | | A_ sfx=trip fx=oops@A
+A | Энтмен-удар не получился. Энтмен-удар споткнулся о шланг. | The Antman punch didn't work. The Antman punch tripped over the hose. | A~
+B | Ха! Жалкий жук! Тогда — гигантский тапок! Тапкомёт, огонь! | Ha! Pathetic bug! Then — the giant slipper! Slipper cannon, fire! | B:up slipper@A sfx_end=splat
+~ 1 | | | A_ fx=splat@A shake
+A | Я плоский... Я очень плоский... Но это ненадолго! | I'm flat... I'm very flat... But not for long! | A~ sfx_end=boing
+B | Это невозможно! Тапок никогда не промахивается! Никогда! | Impossible! The slipper never misses! Never! | B! sweat@B
+A | Тапок не промахнулся. Просто я отлипаю. Это моя суперсила. | The slipper didn't miss. I just bounce back. That's my superpower. | A* A>700
+B | Ещё облако! Ещё тапок! Ещё облако! | Another cloud! Another slipper! Another cloud! | cloud@A sfx=spray
+~ 2 | | | slipper@A sfx_end=splat
+~ 1 | | | A_ fx=splat@A
+~ 1.2 | | | A~ A* sfx=boing,heal
+A | Можешь бить меня хоть до вечера, Барон. Я отрастаю. А твой баллончик — нет. | You can hit me all day, Baron. I grow back. Your spray can doesn't. | A:point A>780
+B | Пшш... пшш... Пусто?! Это нечестно! У меня было три запасных баллона! | Psst... psst... Empty?! That's not fair! I had three spare cans! | sfx=sputter B! sweat@B
+G | Было. Пока я их не открутил. Маленький размер имеет свои преимущества. | Had. Until I unscrewed them. Being small has its advantages. | G>900 G^
+B | Предатель-насекомое! Ты пожалеешь! Вы оба пожалеете! | Traitor insect! You'll regret this! You'll both regret this! | B:up
+A | Сдавайся, Барон! | Surrender, Baron! | A>820
+B | Барон не сдаётся! Барон стратегически отступает! Дымовая шашка! | The Baron never surrenders! The Baron strategically retreats! Smoke bomb! | flash boom@B sfx=boom shake
+~ 1.5 | | | B:hide cloud@B
+A | Он... исчез? Так вообще можно? | He... vanished? Is that allowed? | A:cross
+G | Злодеи всегда так делают. Это у них в уставе. Пункт первый: эффектно уходить. | Villains always do that. It's in their rule book. Rule number one: make a dramatic exit. |
+
+@ park happy | A=500 suit, G=620, L=-200, X1=1000 | crowd
+~ 2 | | | sfx=cheer
+X1 | Ура! Энтмен победил! Он спас пикник! | Hooray! Antman won! He saved the picnic! | X1^ fx=yay@X1
+L | Подождите! Энтмен! Пресса! Газета «Вечерний Муравейск»! Один вопрос! | Wait! Antman! Press! The Anthill Falls Evening News! Just one question! | L>320 flash sfx=pop
+A | Л-Лена?! То есть... гражданка журналистка. Здравствуйте. Чем могу помочь? | L-Lena?! I mean... madam reporter. Hello. How can I help you? | A! sweat@A
+L | Кто вы? Откуда у вас суперсилы? И почему ваш голос мне кажется знакомым? | Who are you? Where did you get your powers? And why does your voice sound familiar? | L:point
+A | Я... я обычный гражданин. Из Антарктиды. Там все так разговаривают. | I'm... an ordinary citizen. From Antarctica. Everyone talks like this there. | A:cross
+L | Из Антарктиды? | From Antarctica? |
+A | Там пингвины. Я им пиццу доставлял. Ой, это лишнее. Мне пора! Город зовёт! | There are penguins. I used to deliver pizza to them. Oops, too much information. I have to go! The city calls! | A>1500 sfx=whoosh
+L | Странный. Но очень смелый. Пожалуй, это моя сенсация. | Strange. But very brave. I think this is my big story. | hearts@L
+G | Удачи с сенсацией. Он, кстати, свободен по пятницам. | Good luck with your story. He's free on Fridays, by the way. |
+L | Кто это сказал?! | Who said that?! | L! L^
+G | Никто. Ветер. Очень разговорчивый ветер. | Nobody. The wind. A very chatty wind. | G>1500

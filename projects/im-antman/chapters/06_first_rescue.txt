@@ -1,0 +1,58 @@
+@ card | Глава 6. Первое спасение | Chapter 6. The First Rescue
+
+@ park2 happy | A=-150 suit, G=-100, X2=850 |
+N | Первое настоящее задание нашлось в городском парке. Тревога. Котик на дереве. | The first real mission turned up in the city park. Alert. A kitty up a tree. |
+X2 | Помогите! Мой Барсик залез на дерево и не может слезть! Он там уже три часа! | Help! My Barsik climbed the tree and can't get down! He's been up there for three hours! | X2! sweat@X2
+A | Не бойтесь, гражданка! Энтмен спешит на помощь! | Fear not, citizen! Antman is here to help! | A>440 G>330 A:up
+X2 | Энтмен? Это от тараканов который? | Antman? Like the bug spray? |
+A | Нет! Это герой! Новый! Очень надёжный! | No! It's a hero! A new one! Very reliable! | A:point
+G | Залезай на дерево. Хватай кота. Слезай. Три шага. Даже ты справишься. | Climb the tree. Grab the cat. Climb down. Three steps. Even you can do this. |
+A | Шаг первый. Залезаю... | Step one. Climbing... | A>600
+~ 1.5 | | | A^^ sfx=whoosh
+~ 1.2 | | | A_ sfx=trip fx=bam@A shake
+A | Шаг первый оказался сложнее, чем я думал. | Step one is harder than I thought. | A~ A* sfx=heal
+~ 1.5 | | | A^^ sfx=whoosh
+~ 1.2 | | | A_ sfx=trip fx=crack@A
+A | Ветка сломалась. Это не я. Это ветка была слабая. | The branch broke. Not my fault. It was a weak branch. | A~ A*
+~ 1.5 | | | A^^ fx=wow@A sfx=boing
+N | С третьей попытки Энтмен добрался до кота. Кот посмотрел на Энтмена. Энтмен посмотрел на кота. | On the third try, Antman reached the cat. The cat looked at Antman. Antman looked at the cat. |
+A | Кис-кис-кис. Иди ко мне, Барсик. Я герой. | Here, kitty kitty. Come to me, Barsik. I'm a hero. |
+~ 1 | | | sfx=ouch fx=oops@A A!
+A | Он меня поцарапал! И укусил! И снова поцарапал! | He scratched me! And bit me! And scratched me again! | A! A* sfx_end=heal
+G | Всё равно заживёт. Держи его крепче! | It'll heal anyway. Hold on tight! |
+N | А потом кот спокойно слез с дерева сам. А Энтмен остался. | And then the cat calmly climbed down the tree all by himself. And Antman stayed up there. |
+X2 | Барсик! Мой хороший! Спасибо вам, Энтмен! Хотя вы ничего не сделали. | Barsik! My sweetie! Thank you, Antman! Although you didn't do anything. | X2^ hearts@X2
+A | Пожалуйста! Обращайтесь! А можно меня теперь кто-нибудь снимет? | You're welcome! Anytime! Now could somebody please get me down? |
+~ 1.2 | | | A_ sfx=trip fx=bonk@A shake
+A | Спасибо, гравитация. Ты всегда рядом. | Thanks, gravity. You're always there for me. | A~ A* sfx=boing
+
+@ street action | A=300 suit, G=420 |
+N | Энтмен решил, что котики — это слишком сложно, и вышел на патрулирование. | Antman decided kitties were too difficult and went out on patrol. | A>500
+G | Внимание! Справа! Бабушка не может перейти дорогу! | Attention! On the right! A granny can't cross the road! | G:point
+A | Я помогу! Бабушка, держитесь за меня! | I'll help! Granny, hold on to me! | A>900
+N | Бабушка перевела Энтмена через дорогу. Потому что Энтмен шёл на красный. | The granny helped Antman across the road. Because Antman was walking on a red light. | sfx=ding
+G | Внимание! Слева! Мальчик уронил мороженое! | Attention! On the left! A boy dropped his ice cream! | G^
+A | Мороженое я спасти не могу. Оно уже на асфальте. Но могу купить новое! | I can't save the ice cream. It's already on the pavement. But I can buy a new one! | A>300
+N | Мальчик получил новое мороженое. Энтмен получил первую благодарность. И первую фотографию. Мальчик снял его на телефон. | The boy got a new ice cream. Antman got his first thank-you. And his first photo. The boy took it on his phone. | flash sfx=pop
+A | Гоша, меня сфотографировали! Как настоящего героя! | Gosha, someone took my picture! Like a real hero! | A^ hearts@A
+G | На фото у тебя закрыты глаза и открыт рот. Но да. Как настоящего. | In the photo your eyes are closed and your mouth is open. But yes. Like a real one. |
+~ 2 | | | sfx=siren police
+G | Сирена! Что-то происходит у банка! | A siren! Something's happening at the bank! | G!
+A | Энтмен — вперёд! | Antman — go! | A>1500 sfx=whoosh
+
+@ police villain | C=850, A=-150 suit, G=-100 |
+N | Но у банка уже всё закончилось. Грабитель застрял во вращающейся двери, и его достал капитан Петрович. | But at the bank it was all over already. The robber had gotten stuck in the revolving door, and Captain Petrovich had pulled him out. | A>380 G>260
+C | Это ещё кто? Карнавал в ноябре? | And who is this? A carnival in November? |
+A | Капитан! Я Энтмен! Новый герой города! Я пришёл помочь! | Captain! I'm Antman! The city's new hero! I'm here to help! | A:up
+C | Герой, значит. А лицензия у вас есть? На геройство? | A hero, huh. And do you have a license? For heroing? | C:cross
+A | Лицензия? А такая бывает? | A license? Is that a thing? |
+C | Не бывает. Поэтому вы и не герой. Вы гражданин в пижаме. Идите домой, гражданин. | It is not. That's why you're not a hero. You're a citizen in pajamas. Go home, citizen. | C:point
+G | Это не пижама! Это костюм! Ручная работа! Мама шила! | It's not pajamas! It's a costume! Handmade! His mom sewed it! | G^ G!
+C | Муравей... разговаривает. Так. Я ничего не видел. У меня отпуск через неделю. Мне нельзя такое видеть. | The ant... is talking. Okay. I saw nothing. My vacation starts in a week. I'm not allowed to see this. | C! sweat@C
+A | Капитан, я правда могу помочь! Я не чувствую боли! То есть чувствую, но потом она проходит! | Captain, I really can help! I don't feel pain! I mean I do, but then it goes away! | A>520
+C | Слушай, сынок. Геройство — это не про то, что тебе не больно. Это про то, что ты делаешь, когда больно. Понял? | Listen, son. Being a hero isn't about not getting hurt. It's about what you do when it hurts. Got it? | C:point
+A | Понял. Наверное. Не совсем. Можно ещё раз? | Got it. I think. Not really. Can you say that again? |
+C | Нельзя. Иди домой. Шапку надень. | No. Go home. Put on a hat. | C>1500
+A | Почему все говорят мне про шапку?! | Why does everyone keep telling me about the hat?! | A! A:up
+G | Потому что это хороший совет, Антон. Ноябрь всё-таки. | Because it's good advice, Anton. It is November. |
+N | Антон ещё не понял слов капитана. Но очень скоро ему придётся их понять. А пока в городе появилось кое-что ядовитое. | Anton did not understand the captain's words yet. But very soon he would have to. And meanwhile, something poisonous had come to town. | sfx=spray

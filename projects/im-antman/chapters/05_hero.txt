@@ -1,0 +1,67 @@
+@ card | Глава 5. Рождение героя | Chapter 5. A Hero Is Born
+
+@ home happy | A=450, G=620 |
+G | Итак. План. Ты не можешь пораниться. Ты всё время падаешь. Городу нужен герой. Складываем два и два. | So. The plan. You can't get hurt. You fall all the time. The city needs a hero. Put two and two together. | G:point
+A | Получается... четыре? | That makes... four? |
+G | Получается супергерой! Ты, Антон. Ты станешь супергероем! | That makes a superhero! You, Anton. You will become a superhero! | G^ fx=wow@G sfx=fanfare
+A | Я?! Гоша, я вчера проиграл спор голубю. Голубь забрал мой пончик. | Me?! Gosha, yesterday I lost an argument to a pigeon. The pigeon took my donut. |
+G | Это потому что у тебя не было костюма. С костюмом всё по-другому. Костюм — это половина героя. | That's because you didn't have a costume. With a costume, everything changes. The costume is half the hero. | G:up
+A | А вторая половина? | And the other half? |
+G | Вторая половина — это ты. С ней будет сложнее. Но мы справимся. | The other half is you. That part will be harder. But we'll manage. |
+A | Ладно. Допустим. Но я не умею шить. Я однажды пришил пуговицу к своему пальцу. | Okay. Say I agree. But I can't sew. I once sewed a button onto my own finger. | A:cross
+G | Палец, кстати, теперь бы зажил. Но шить будет кое-кто другой. Звони маме. | Your finger would heal now, by the way. But someone else will do the sewing. Call your mom. |
+
+@ kitchen happy | M=900, A=420, G=560 |
+N | Через час мама Антона стояла на его кухне со швейной машинкой, тремя метрами ткани и большими подозрениями. | An hour later, Anton's mom stood in his kitchen with a sewing machine, three meters of fabric and big suspicions. |
+M | Антоша. Ещё раз. Зачем тебе красный костюм с муравьиными усиками? | Tony. One more time. Why do you need a red suit with ant antennae? |
+A | Мам. Это... для карнавала. Очень важного. Городского. Тематического. | Mom. It's... for a carnival. A very important one. City-wide. Themed. |
+M | Карнавал в ноябре? | A carnival in November? |
+A | Это северный карнавал. Для смелых. | It's a northern carnival. For brave people. | A:up
+M | Ну ладно. Только скажи мне честно. Это не связано с той девочкой с верхнего этажа? Леной? | Well, all right. But tell me the truth. This isn't about that girl from upstairs? Lena? | hearts@A
+A | Мама! Нет! Абсолютно! Может быть! Немного! Шей, пожалуйста! | Mom! No! Absolutely not! Maybe! A little! Please, just sew! | A! sweat@A
+~ 3 | | | sfx=snip notes@M M!
+N | Мама шила всю ночь. Гоша давал советы по дизайну. Мама думала, что это говорит телевизор. | Mom sewed all night. Gosha gave design tips. Mom thought it was the TV talking. | M! notes@M
+G | Усики повыше! И эмблему на грудь! Большую букву «А»! | Antennae higher! And an emblem on the chest! A big letter A! | G^
+M | Какой разговорчивый сегодня телевизор. | The TV is so chatty today. | M:cross
+~ 2 | | | flash sfx=fanfare A:suit A^ fx=wow@A
+M | Готово! Ой, какой красивый! Прямо как настоящий герой! Только шапку под шлем надень, уши простудишь. | Done! Oh, how handsome! Just like a real hero! But wear a hat under the helmet, you'll catch a cold in your ears. | M:up hearts@M
+A | Мам, у меня теперь ничего не простуживается. | Mom, I don't catch colds anymore. |
+M | Все так говорят. А потом сопли. Шапку надень. | Everybody says that. And then the sniffles. Wear a hat. |
+
+@ rooftop happy | A=500 suit, G=700 |
+G | Теперь имя. У героя должно быть громкое имя. Предлагаю: «Капитан Регенерация». | Now a name. A hero needs a big name. I suggest: Captain Regeneration. | G:point
+A | Длинно. Пока выговоришь, злодей уже убежит. | Too long. By the time you say it, the villain's gone. |
+G | «Человек-Котлета»? Ты же их много ешь. | Meatball Man? You do eat a lot of them. |
+A | Нет! Никаких котлет в имени героя. | No! No meatballs in a hero's name. | A:cross
+G | «Неубиваемый Антон»? | Unbreakable Anton? |
+A | Слишком честно. Все узнают, что я Антон. | Too honest. Everyone will know I'm Anton. |
+G | Хорошо. Ты упал в регенерин вместе с муравьём. Ты красный. У тебя усики. Ты... | Fine. You fell into Regenerin together with an ant. You're red. You have antennae. You're... | G:up
+A | Я... Энтмен! Человек-муравей! Я Энтмен! | I'm... Antman! The ant man! I'm Antman! | A^ A:up sfx=fanfare fx=wow@A
+G | Ну, шеф Борис сказал, что это похоже на средство от тараканов. | Well, Boss Boris did say it sounds like a bug spray brand. |
+A | Шеф Борис не понимает искусства. Я Энтмен! И я спасу этот город! | Boss Boris doesn't understand art. I'm Antman! And I will save this city! | A:point
+~ 1 | | | A>700 A_ sfx=trip fx=bonk@A
+A | Начиная с завтрашнего дня. Сегодня я немного полежу. | Starting tomorrow. Today I'll lie here for a bit. | A~ A*
+
+@ gym action | A=640 suit, G=880 |
+N | Но сначала — тренировка. Гоша составил программу. Он прочитал три книги о боксе и одну о балете. | But first, training. Gosha made a program. He had read three books about boxing and one about ballet. | cap={ТРЕНИРОВКА|TRAINING}
+G | Упражнение первое! Прыжки! Выше! Ещё выше! | Exercise one! Jumps! Higher! Even higher! | G:up
+~ 1.2 | | | A^ sfx=boing
+~ 1.2 | | | A^^ sfx=boing
+~ 1.5 | | | A^^ A_ sfx=trip fx=bam@A shake
+A | Потолок. Я встретил потолок. Он твёрдый. | The ceiling. I met the ceiling. It's hard. | A~ A* sfx=heal
+G | Упражнение второе! Бег! | Exercise two! Running! | G:point
+~ 1.5 | | | A>1150 sfx=whoosh
+~ 1.5 | | | A>150 sfx=whoosh
+~ 1.2 | | | A>640 A_ sfx=trip fx=oops@A
+A | Я споткнулся о собственную тень. Это вообще возможно? | I tripped over my own shadow. Is that even possible? | A~
+G | Для тебя — да. Упражнение третье! Героическая поза! | For you, yes. Exercise three! The heroic pose! |
+A | Вот так? Или так? А может, вот так? | Like this? Or like this? Or maybe like this? | A:up
+~ 1 | | | A:point notes@A
+~ 1 | | | A:cross
+G | Плохо. Но уже лучше, чем было. Упражнение четвёртое! Гантели! | Bad. But better than before. Exercise four! Dumbbells! | G^
+A | Тяжело... очень тяжело... руки отваливаются! | Heavy... so heavy... my arms are falling off! | A! A:up sweat@A
+~ 1.5 | | | A* sfx=heal fx=wow@A
+A | А нет! Руки прикрутились обратно! Ещё подход! И ещё! Я не устаю! | No wait! My arms reattached! Another set! And another! I don't get tired! | A^ A:up
+G | Вот это я понимаю! Через неделю ты будешь сильнее всех в этом зале! | That's what I'm talking about! In a week you'll be the strongest guy in this gym! |
+N | Через неделю Антон был самым сильным в зале. Правда, в зале больше никого не было. Все ушли, потому что муравей кричал. | A week later, Anton was the strongest person in the gym. To be fair, no one else was there. They all left because the ant kept yelling. | A:up
+G | Слабаки! Энтмен готов! | Weaklings! Antman is ready! | G^ fx=yay@G sfx=fanfare

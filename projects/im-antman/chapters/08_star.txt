@@ -1,0 +1,64 @@
+@ card | Глава 8. Звезда | Chapter 8. A Star Is Born
+
+@ home happy | A=450, G=620 |
+N | На следующее утро весь город читал газету. На первой странице — Энтмен. С закрытыми глазами и открытым ртом. | The next morning the whole city was reading the paper. On the front page: Antman. With his eyes closed and his mouth open. | cap={ЭНТМЕН СПАС ПИКНИК!|ANTMAN SAVES PICNIC!}
+A | Гоша! Я на первой странице! «Таинственный герой спас пикник». Таинственный! Это я таинственный! | Gosha! I'm on the front page! Mysterious hero saves picnic. Mysterious! I'm the mysterious one! | A^ hearts@A
+G | Читай дальше. Там написано: «Герой похож на огромного божьего коровку в пижаме». | Keep reading. It says: The hero looks like a giant ladybug in pajamas. |
+A | Это Лена написала? Божья коровка. Значит, она считает меня милым! | Did Lena write that? A ladybug. That means she thinks I'm cute! | hearts@A
+G | Или страшным. Божьи коровки бывают очень страшными. Если ты тля. | Or scary. Ladybugs can be very scary. If you're an aphid. |
+~ 1.5 | | | sfx=ding
+M | Антоша! Ты видел газету? Там какой-то сумасшедший в костюме, точь-в-точь как я тебе сшила! | Tony! Did you see the paper? Some lunatic in a costume exactly like the one I sewed for you! |
+A | Мам! Какое совпадение! Наверное... это модно сейчас. | Mom! What a coincidence! I guess... it's trendy right now. | A! sweat@A
+M | Модно. Ага. И шапку он не надел. Весь в тебя. | Trendy. Right. And he's not wearing a hat. Just like you. |
+
+@ tv happy | H=900, A=-150 suit, G=-150, K=1400 hidden | crowd
+N | Через три дня Энтмена пригласили на телевидение. В самое популярное шоу города. | Three days later, Antman was invited onto TV. The most popular show in town. |
+H | Добрый вечер, Муравейск! В студии шоу «Герои» — тот, о ком говорит весь город! Встречайте — Энтмен! | Good evening, Anthill Falls! Live on the Hero Show — the man the whole city's talking about! Please welcome — Antman! | H:up sfx=cheer
+~ 2 | | | A>580 A:wave sfx=cheer
+~ 1 | | | A_ sfx=trip fx=oops@A
+A | Всё нормально! Это был трюк! Специальный геройский выход! | It's all fine! That was a stunt! A special hero entrance! | A~ A:up
+H | Потрясающе! Энтмен, скажите, правда ли, что вы не чувствуете боли? | Amazing! Antman, tell us, is it true that you can't feel pain? | H:point
+A | Чувствую. Просто недолго. Примерно секунду. Иногда две. Если очень больно — три. | I can. Just not for long. About a second. Sometimes two. If it really hurts, three. |
+H | Можем проверить? Прямо в эфире? Зрители хотят доказательств! | Can we test it? Live on air? The audience wants proof! |
+A | Ну... давайте. Только не сильно. То есть можно сильно. Но лучше не сильно. | Well... okay. Just not too hard. I mean you can go hard. But better not. |
+H | Наш ассистент сейчас уронит на вас пианино! | Our assistant will now drop a piano on you! | H:up
+A | Пианино?! Я думал, вы скажете «ущипнёт»! | A piano?! I thought you'd say pinch! | A! sweat@A
+~ 1.5 | | | sfx=whoosh
+~ 1 | | | A_ fx=crack@A sfx=boom shake
+~ 1.5 | | | A~ A* sfx=boing,heal
+~ 2 | | | sfx=cheer fx=wow@H
+H | Невероятно! Он цел! А пианино — нет! Кто-нибудь, вызовите настройщика! | Unbelievable! He's fine! The piano isn't! Someone call a piano tuner! | H^
+A | Простите за пианино. Можно я его потом отремонтирую? Я умею чинить. Ну, себя. | Sorry about the piano. Can I fix it later? I'm good at repairs. Well, of myself. |
+H | Последний вопрос! Энтмен, кто вы на самом деле? Под маской? | One last question! Antman, who are you really? Under the mask? | H:point
+G | Не отвечай! Это ловушка! Все телеведущие хитрые! | Don't answer! It's a trap! All TV hosts are sneaky! |
+A | Я... тот, кто всегда встаёт. Сколько бы раз ни упал. | I'm... the one who always gets up. No matter how many times I fall. | A:up
+H | Браво! Аплодисменты! Энтмен, господа! | Bravo! A round of applause! Antman, everyone! | sfx=cheer H:up
+N | В зале сидела очень странная зрительница. С крылышками. Она очень внимательно смотрела на Энтмена. И облизывалась. | In the audience sat a very strange woman. With little wings. She watched Antman very closely. And licked her lips. | K:show K>1100 sfx=bzz
+K | Какой интересный мальчик. Какая интересная кровь. Мне надо попробовать. Совсем капельку. | What an interesting boy. What interesting blood. I must have a taste. Just a tiny drop. | K:point
+~ 1.5 | | | sfx=bzz K>650 fx=oops@A A!
+A | Ай! Меня кто-то укусил! Комар! В студии комар! | Ow! Something bit me! A mosquito! There's a mosquito in the studio! | A^ A* sfx_end=heal
+K | Спасибо за автограф, Энтмен. Ещё увидимся. | Thanks for the autograph, Antman. See you soon. | K>1500 sfx=bzz
+G | Антон... мне не нравится эта тётя. У неё жало. Нормальные тёти без жала. | Anton... I don't like that lady. She has a stinger. Normal ladies don't have stingers. | G! sweat@G
+
+@ pizzeria happy | O=850, A=380 |
+N | Тем временем в пиццерии шеф Борис придумал гениальный бизнес-план. | Meanwhile, at the pizzeria, Boss Boris came up with a brilliant business plan. |
+O | Мурашов! Ты видел Энтмена по телику? Это же золото! Нам нужен Энтмен для рекламы! | Murashov! Did you see Antman on TV? That's pure gold! We need Antman for an ad! | O:up
+A | Для рекламы? | For an ad? |
+O | «Пицца "Мураш" — выбор героев! Даже Энтмен заживает быстрее с нашей пепперони!» Гениально? | Murash Pizza — the choice of heroes! Even Antman heals faster with our pepperoni! Brilliant? | O:point
+A | Шеф, это неправда. Он заживает сам. Без пепперони. | Boss, that's not true. He heals by himself. No pepperoni needed. |
+O | Мурашов, это реклама! Там не бывает правды! Найди мне этого Энтмена! Если найдёшь — премия! Двойная! | Murashov, it's advertising! There's no truth in advertising! Find me this Antman! Find him, and you get a bonus! A double one! | O^
+A | Двойная премия... за то, чтобы найти себя. Это самая лёгкая работа в моей жизни. | A double bonus... for finding myself. Easiest job of my life. | A:cross
+O | Что ты там бормочешь? | What are you mumbling? |
+A | Говорю, постараюсь, шеф! | I said I'll do my best, boss! | A>-200
+
+@ street romance | L=880, A=-150 |
+N | А вечером случилось самое сложное. Лена позвала Антона в кафе. Но не на свидание. | And that evening, the hardest thing happened. Lena invited Anton to a café. But not on a date. | A>480
+L | Антон, ты же всё время по городу бегаешь. Ты не видел Энтмена? Мне нужно второе интервью. Он такой... смелый. | Anton, you run around town all the time. Have you seen Antman? I need a second interview. He's so... brave. | hearts@L
+A | Смелый? Он? Да он... обычный. Падает всё время. И волосы у него, наверное, лохматые. | Brave? Him? He's... ordinary. Falls down all the time. And his hair's probably shaggy. | A:cross A:hair=2.2
+L | Ты что, ревнуешь? К герою? | Wait, are you jealous? Of a hero? |
+A | Я?! Нет! Как можно ревновать к... к себе. То есть к нему. К нему! | Me?! No! How could I be jealous of... myself. I mean him. Him! | A! sweat@A
+L | Ты странный сегодня, Антон. Ладно, если увидишь его — передай, что я жду. | You're acting weird today, Anton. Anyway, if you see him, tell him I'm waiting. | L>1400
+A | Передам. Обязательно. Себе. | I will. Definitely. To myself. | A:cross
+G | Поздравляю. Ты первый человек в истории, у которого соперник в любви — он сам. | Congratulations. You're the first person in history whose rival in love is himself. |
+A | Гоша, не начинай. | Gosha, don't start. |
+N | А в это время на старой фабрике на окраине города собирались очень плохие люди. И одна очень плохая комариха. | Meanwhile, at an old factory on the edge of town, some very bad people were gathering. And one very bad lady mosquito. | sfx=bzz

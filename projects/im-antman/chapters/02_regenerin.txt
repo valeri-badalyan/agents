@@ -1,0 +1,54 @@
+@ card | Глава 2. Регенерин | Chapter 2. Regenerin
+
+@ street lair | A=-150 | night
+N | Секретный институт находился на окраине города. Секретным он был настолько, что на нём висела огромная вывеска. | The secret institute stood on the edge of town. It was so secret that it had a giant sign on it. | A>400 cap={СЕКРЕТНЫЙ ИНСТИТУТ|SECRET INSTITUTE}
+A | Секретный институт. Вход со двора. Звонить три раза. Пароль: «пицца». Хм. Сложный пароль. | Secret institute. Back entrance. Ring three times. Password: pizza. Hmm. Tough password. | A:point
+~ 1.5 | | | sfx=ding A^
+A | Пицца! Пицца! Ой. То есть... пароль: пицца! | Pizza! Pizza! Oops. I mean... password: pizza! | A!
+
+@ lab lair | S=300, A=-150, G=1050 | night
+S | Наконец-то! Молодой человек, вы знаете, сколько стоит минута учёного? | Finally! Young man, do you know how much a scientist's minute costs? | S! A>620
+A | Э-э... дешевле пиццы? | Uh... less than a pizza? |
+S | Дороже! Гораздо дороже! Профессор Квасов, лауреат премии «Золотая пробирка». Пиццу сюда, на стол. Аккуратно! | More! Much more! Professor Kvasov, winner of the Golden Test Tube Award. Pizza goes here, on the table. Carefully! | S:point
+A | Не волнуйтесь, профессор. Аккуратность — моё второе имя. | Don't worry, professor. Careful is my middle name. | A>520
+~ 1 | | | A_ sfx=trip fx=oops@A
+A | Первое имя — Антон. Второе... ещё тренируется. | My first name is Anton. My middle name is... still in training. | A~ sfx=boing
+S | Ничего не трогайте! Особенно вон тот зелёный чан. Это регенерин. Мой главный проект. | Touch nothing! Especially that green vat over there. That is Regenerin. My greatest project. | S:point
+A | Регенерин? Звучит как газировка. | Regenerin? Sounds like a soda. |
+S | Это не газировка! Это вещество, которое восстанавливает живые ткани. Царапины, синяки, переломы — всё заживает за секунды! | It is not a soda! It is a substance that rebuilds living tissue. Scratches, bruises, broken bones — all healed in seconds! | S:up
+A | Ого. А его пробовали на людях? | Wow. Have you tested it on people? |
+S | Пока только на муравье. Номер сорок семь. Вон он, в банке. Сидит и смотрит. Слишком внимательно смотрит. | Only on an ant so far. Number forty-seven. Over there, in the jar. Sitting and staring. Staring a little too closely. | G^
+G | ... | ... | G:wave
+A | Профессор, он мне только что помахал. | Professor, he just waved at me. |
+S | Муравьи не машут. Это научный факт. Так, где моя пицца с ананасами? | Ants do not wave. That is a scientific fact. Now, where is my pineapple pizza? |
+A | С ананасами? Вы же учёный! Ананасы на пицце — это против науки! | Pineapple? But you're a scientist! Pineapple on pizza is against science! | A!
+S | Наука — это смелость, юноша! Давайте сюда коробку. | Science is courage, young man! Hand over the box. | S>480
+~ 1 | | | sfx=pop G^^ G>760
+N | В этот момент муравей номер сорок семь сбежал из банки. Позже он скажет, что просто хотел понюхать ананас. | At that moment, ant number forty-seven escaped from his jar. Later he would say he just wanted to smell the pineapple. | G>700
+S | Муравей! На свободе! Ловите его! | The ant! He's loose! Catch him! | S! S:up
+A | Где?! Я его не вижу! Я вижу только... ой, я на него наступаю! Не наступаю! Прыгаю! | Where?! I can't see him! I only see... oops, I'm stepping on him! Not stepping! Jumping! | A^ A>840
+~ 1.4 | | | A^^ A>980 G>980 sfx=whoosh
+~ 1.4 | | | flash fx=bulk@A sfx=splash A:hide G:hide
+N | Бульк. | Splash. |
+S | Нет-нет-нет! Только не в регенерин! Там же концентрат! Сто процентов! | No, no, no! Not into the Regenerin! That's pure concentrate! One hundred percent! | S! sweat@S
+~ 2 | | | A:show A=980 A^^ A* sfx=heal flash
+A | Профессор... почему я светлюсь зелёным? Это нормально? Скажите, что это нормально! | Professor... why am I glowing green? Is that normal? Tell me that's normal! | A! A* A>820
+S | Это... это... ненормально! Это гениально! То есть ужасно! То есть мне надо записать! | It's... it's... not normal! It's brilliant! I mean terrible! I mean I need to write this down! | S^ S:up
+A | А муравей? Где муравей? | And the ant? Where's the ant? |
+S | Утонул, наверное. Бедный сорок седьмой. Хороший был муравей. Молчаливый. | Drowned, probably. Poor forty-seven. He was a good ant. Very quiet. | S:cross
+A | Простите, профессор. Я... я пойду. Пицца за счёт заведения. | I'm sorry, professor. I... I'll go. The pizza is on the house. | A>-200
+S | Подождите! Вас нужно обследовать! Юноша! Как вас зовут?! | Wait! You must be examined! Young man! What is your name?! | S>200 S!
+N | Но Антон уже убежал. А в его кармане, мокрый и зелёный, сидел кое-кто ещё. | But Anton had already run off. And in his pocket, wet and green, sat someone else. |
+
+@ street sad | A=-150 | night
+A | Так. Без паники. Я упал в секретную жидкость. Свечусь. Пиццу отдал бесплатно. Шеф меня убьёт. Нормальный вечер. | Okay. No panic. I fell into a secret liquid. I'm glowing. I gave the pizza away for free. My boss will kill me. A normal evening. | A>600 A*
+G | Апчхи! | Achoo! | G:hide
+A | Будь здоров. | Bless you. |
+~ 1 | | | A! sweat@A
+A | Стоп. Кто это сказал? Тут никого нет. Я слышу голоса. Отлично. Теперь ещё и голоса. | Wait. Who said that? Nobody's here. I'm hearing voices. Great. Now there are voices too. | A:cross
+N | Антон решил, что всё это ему приснилось. Он пришёл домой и лёг спать. В зелёной пижаме. Хотя пижама у него была синяя. | Anton decided he had dreamed it all. He went home and went to bed. In green pajamas. Even though his pajamas were blue. | A>1500
+
+@ home sad | A=520 | night
+~ 3 | | | zzz@A A*
+N | Ночью Антону снились муравьи, ананасы и почему-то пингвины. | That night Anton dreamed of ants, pineapples, and for some reason penguins. | zzz@A
+~ 2.5 | | | notes@A A*

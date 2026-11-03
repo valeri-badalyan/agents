@@ -1,0 +1,54 @@
+@ title happy | Полнометражная комедия · 12+ | A feature comedy · 12+
+N | Студия «Муравейник» представляет. Полнометражная комедия. «Я Энтмен!» | Anthill Studios presents. A feature comedy. I'm Antman! | sfx=fanfare
+
+@ card | Глава 1. Курьер | Chapter 1. The Courier
+
+@ home happy | A=420 hair=1 | night
+~ 2 | | | A:hide zzz@A
+N | Город Муравейск. Шесть утра. В этой квартире спит самый невезучий человек в городе. | The city of Anthill Falls. Six a.m. In this apartment sleeps the unluckiest man in town. | A:hide
+N | Антон Мурашов. Двадцать пять лет. Курьер. Рекордсмен по опозданиям. | Anton Murashov. Twenty-five. Delivery guy. Record holder for being late. | A:show zzz@A
+~ 1.5 | | | sfx=ding shake A^
+A | А?! Что?! Сколько времени?! Будильник, ты же обещал! | Huh?! What?! What time is it?! Alarm clock, you promised! | A! sweat@A
+M | Антоша! Ты опять проспал? Я звоню уже третий раз! | Tony! Did you oversleep again? This is my third call! |
+A | Мам, я не проспал. Я... очень глубоко медитировал. | Mom, I did not oversleep. I was... meditating very deeply. |
+M | Ага. С храпом. Завтрак на столе, шапку надень, и не спотыкайся! | Sure. With snoring. Breakfast is on the table, put on a hat, and don't trip! |
+A | Я никогда не спотыкаюсь! | I never trip! | A>700
+~ 1 | | | A_ sfx=trip fx=bonk@A
+A | Почти никогда. | Almost never. | A~ sfx=boing
+
+@ street happy | A=-150 |
+N | Антон работает в пиццерии «Мураш». Его девиз: «Доставим горячей. Или хотя бы доставим». | Anton works at Murash Pizza. His motto: Delivered hot. Or at least delivered. | A>500
+A | Так, восемь пицц, три адреса, одна лестница. Что может пойти не так? | Okay. Eight pizzas, three addresses, one staircase. What could possibly go wrong? | A:up
+~ 1.2 | | | A^ sfx=whoosh
+~ 1 | | | A_ sfx=trip fx=bam@A
+A | Всё. Всё может пойти не так. | Everything. Everything can go wrong. | A~ sfx=boing
+
+@ pizzeria villain | O=850, A=-150 |
+O | Мурашов! Ты опоздал на сорок минут! Пицца «Пепперони» уже стала пиццей «Холодная печаль»! | Murashov! You are forty minutes late! The pepperoni pizza has become the cold sadness pizza! | O! A>380
+A | Шеф Борис, меня задержала очень агрессивная лужа. | Boss Boris, I was delayed by a very aggressive puddle. |
+O | Лужа?! В прошлый раз был голубь. До этого — подозрительная дверь! | A puddle?! Last time it was a pigeon. Before that, a suspicious door! | O:point
+A | Дверь была реально подозрительная. Она открывалась на себя. | That door really was suspicious. It opened the wrong way. |
+O | Ещё одна ошибка, и будешь доставлять пиццу пингвинам. В Антарктиду. Пешком! | One more mistake and you'll be delivering pizza to penguins. In Antarctica. On foot! | O^ shake
+A | Понял, шеф. Пингвины, пешком. То есть нет! Буду стараться! | Got it, boss. Penguins, on foot. I mean, no! I will try harder! | A!
+
+@ street happy | A=-150, L=900 |
+N | По дороге Антон встретил Лену Синицыну. Она живёт этажом выше и работает журналисткой. | On the way, Anton ran into Lena Sinitsyna. She lives one floor up and works as a reporter. | A>520
+N | Антон влюблён в неё уже два года. Лена об этом пока не знает. | Anton has been in love with her for two years. Lena does not know that yet. | hearts@A
+L | Привет, Антон! Опять бежишь с пиццами? | Hi, Anton! Running with pizzas again? |
+A | Привет, Лена! Да, я... то есть пиццы... то есть они бегут, а я их несу. | Hi, Lena! Yes, I... I mean the pizzas... I mean they run, and I carry them. | A! sweat@A
+L | Понятно. А я ищу сенсацию для газеты. Ничего интересного не видел? | I see. I'm looking for a big story for the paper. Seen anything interesting? | L:point
+A | Интересного? Я однажды видел голубя, который съел целый пончик! | Interesting? I once saw a pigeon eat a whole donut! |
+L | Это... очень смелая сенсация. Ладно, удачи с доставкой! | That is... a very bold story. Okay, good luck with the delivery! | L>1400
+A | Целый пончик, Антон. Целый пончик. Ты гений общения. | A whole donut, Anton. A whole donut. You are a genius of conversation. | A:cross
+~ 1 | | | A>700 A_ sfx=trip fx=oops@A
+A | И ходьбы. | And of walking. | A~
+
+@ pizzeria villain | O=850, A=380 | night
+N | Вечером шеф Борис дал Антону последний шанс. | That evening, Boss Boris gave Anton one last chance. |
+O | Мурашов. Секретный институт заказал пиццу. Большую. Доставишь вовремя — получишь премию. | Murashov. The secret institute ordered a pizza. A big one. Deliver it on time and you get a bonus. | O:point
+A | Премию?! Настоящую? С деньгами? | A bonus?! A real one? With money? | A^
+O | С деньгами. Опоздаешь — пингвины. | With money. Be late, and it's penguins. |
+A | Шеф, я вас не подведу! Энтмен... то есть Антон Мурашов, на задании! | Boss, I won't let you down! Antman... I mean Anton Murashov, on a mission! | A:up
+O | Какой ещё Энтмен? | What Antman? |
+A | Не знаю. Само вырвалось. Красиво звучит, да? | No idea. It just came out. Sounds cool, right? | A>1500
+O | Звучит как средство от тараканов. Беги уже! | Sounds like a bug spray brand. Just go! | O!

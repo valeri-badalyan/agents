@@ -1,0 +1,51 @@
+@ card | Глава 4. Жизнь с суперсилой | Chapter 4. Living With a Superpower
+
+@ barber happy | A=640 hair=1.5, P=880 |
+N | Оказалось, что жить с регенерацией не так просто, как кажется. Начнём с парикмахерской. | It turned out that living with regeneration is not as easy as it sounds. Let's start with the barbershop. |
+P | Как стрижём, молодой человек? | How would you like it, young man? |
+A | Покороче, пожалуйста. Мне на работу, шеф не любит лохматых. | Short, please. I have work, and my boss hates shaggy hair. |
+P | Сделаем! Чик-чик... чик-чик... так... | You got it! Snip-snip... snip-snip... there... | sfx=snip A:hair=1
+P | Готово! Ой. Нет, не готово. Оно... оно отросло обратно?! | Done! Oh. No, not done. It... it grew back?! | A:hair=2 P!
+A | Да, извините. У меня теперь такая особенность. | Yes, sorry. That's a thing with me now. |
+P | Особенность?! Я тридцать лет стригу! Ещё раз! Чик-чик-чик-чик! | A thing?! I've been cutting hair for thirty years! Again! Snip-snip-snip-snip! | sfx=snip A:hair=1 P!
+~ 1.5 | | | A:hair=2.5 fx=wow@A sfx=pop
+P | Оно растёт быстрее, чем я стригу! Это вызов! Это личное! | It grows faster than I cut! This is a challenge! This is personal! | P! P^ sfx=snip
+~ 2 | | | sfx=snip A:hair=1.2 P!
+~ 1.5 | | | A:hair=3 sfx=pop fx=boing@A
+A | Может, просто причешем? | Maybe just comb it? |
+P | Уходите. Просто уходите. Денег не надо. Я пойду работать в библиотеку. Там тихо, и ничего не растёт. | Leave. Just leave. No charge. I'm going to go work at a library. It's quiet there, and nothing grows. | P:cross sweat@P
+A | Простите! Я буду заходить! Просто поздороваться! | Sorry! I'll stop by! Just to say hi! | A>-200
+
+@ food happy | A=640, G=820 |
+N | Вторая проблема: еда. Чтобы всё заживало, организму нужна энергия. Много энергии. | Problem number two: food. To heal everything, the body needs energy. Lots of energy. |
+A | Котлета. Ещё котлета. Пюре. Ещё пюре. Гоша, почему я такой голодный? | A meatball. Another meatball. Mashed potatoes. More potatoes. Gosha, why am I so hungry? | A:up
+G | Регенерация, друг мой. Твоё тело чинит себя каждую секунду. А стройматериалы где брать? Правильно. В котлетах. | Regeneration, my friend. Your body repairs itself every second. Where does it get building materials? Right. From meatballs. | G:point
+A | Это самое прекрасное, что я слышал в жизни. | That's the most beautiful thing I've ever heard. | hearts@A
+G | А мне можно крошку? Одну. Маленькую. С сахаром. | Can I have a crumb? Just one. A little one. With sugar. | G^
+N | В тот день Антон съел двенадцать котлет, три тарелки пюре и торт. Гоша съел одну крошку. И потом час лежал. | That day Anton ate twelve meatballs, three plates of potatoes, and a cake. Gosha ate one crumb. And then lay down for an hour. | G_
+G | Я объелся. Не трогайте меня. Я теперь живу здесь. | I'm stuffed. Don't touch me. I live here now. | zzz@G
+
+@ pizzeria happy | O=850, A=380 |
+N | Третья проблема: работа. Точнее, шеф Борис. | Problem number three: work. More precisely, Boss Boris. |
+O | Мурашов! Ты вчера отдал пиццу бесплатно! В институт! Учёным! Они и так умные! | Murashov! Yesterday you gave a pizza away for free! To the institute! To scientists! They're already smart! | O! O:point
+A | Шеф, там была чрезвычайная ситуация. С жидкостью. И муравьём. | Boss, there was an emergency. With a liquid. And an ant. |
+O | Я не хочу ничего слышать! Иди в печь! То есть к печи! Доставай пиццу! | I don't want to hear it! Get in the oven! I mean, go to the oven! Get the pizza! | O^
+A | Иду, иду... ой! Горячий противень! | Going, going... ouch! Hot tray! | A>1000 sfx=pshh fx=pshh@A A!
+O | Мурашов! Ты голыми руками схватил противень! Сейчас же к врачу! | Murashov! You grabbed the tray with your bare hands! Go to the doctor right now! | O! sweat@O
+A | Не надо к врачу! Смотрите! Всё в порядке! Ни следа! | No doctor needed! Look! It's all fine! Not a mark! | A* sfx_end=heal A>700
+O | Как это ни следа? Я видел, как ты обжёгся! | What do you mean not a mark? I saw you burn yourself! |
+A | Это... крем. Новый. Очень хороший. «Противоожоговый Мураш». Двадцать процентов скидка для сотрудников. | It's... a cream. A new one. Very good. Murash Anti-Burn. Twenty percent off for employees. | A:point
+O | Хм. Подозрительно. Ты сегодня подозрительный, Мурашов. Подозрительнее той двери. | Hmm. Suspicious. You're suspicious today, Murashov. More suspicious than that door. | O:cross
+A | Спасибо, шеф! То есть извините, шеф! | Thank you, boss! I mean sorry, boss! | A>-200
+
+@ street romance | L=900, A=-150 |
+N | И самая сложная проблема. Лена. | And the hardest problem of all. Lena. |
+L | Антон! Привет! Слушай, у тебя такие волосы... пышные. Ты что-то сделал? | Anton! Hi! Your hair is so... big. Did you do something? | A>500
+A | Я? Нет! То есть да! То есть они сами. Они очень... самостоятельные. | Me? No! I mean yes! I mean they did it themselves. They're very... independent. | A:hair=2.5 A!
+L | Забавно. А я сегодня пишу статью про героев. Настоящих. Которые спасают людей. Знаешь таких? | Funny. Today I'm writing an article about heroes. Real ones. Who save people. Know any? | L:point
+A | Героев? Я... нет. Наверное. Пока нет. | Heroes? I... no. Probably not. Not yet. |
+L | Жаль. В нашем городе нужен герой. Кто-то смелый. Кто-то, кто не боится падать. | Too bad. Our city needs a hero. Someone brave. Someone who isn't afraid to fall. | L>1400
+A | Не боится падать... | Isn't afraid to fall... | A:cross
+~ 1 | | | A>620 A_ sfx=trip fx=bonk@A
+A | Я. Это я. Я всё время падаю. И мне не больно. | Me. That's me. I fall all the time. And it doesn't hurt. | A~ A* sfx=boing
+G | Антон. Мне кажется, у меня есть идея. Безумная. Тебе понравится. | Anton. I think I have an idea. A crazy one. You'll love it. |

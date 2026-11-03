@@ -23,6 +23,17 @@ VOICES: dict[str, dict[str, tuple[str, str, float, float]]] = {
         "M": ("anna", "ru", 1.05, 1.0),
         "P": ("aleksandr", "ru", 0.95, 1.18),
         "B": ("aleksandr", "ru", 0.74, 0.93),
+        "G": ("aleksandr", "ru", 1.6, 1.12),
+        "L": ("irina", "ru", 1.04, 1.02),
+        "T": ("aleksandr", "ru", 0.86, 1.22),
+        "K": ("natalia", "ru", 1.25, 1.05),
+        "C": ("aleksandr", "ru", 0.8, 0.9),
+        "O": ("aleksandr", "ru", 0.9, 1.12),
+        "D": ("aleksandr", "ru", 1.05, 0.95),
+        "H": ("aleksandr", "ru", 1.2, 1.15),
+        "X1": ("aleksandr", "ru", 1.0, 1.0),
+        "X2": ("anna", "ru", 0.92, 0.95),
+        "X3": ("aleksandr", "ru", 1.08, 1.1),
     },
     "en": {
         "N": ("clb", "en", 1.0, 0.98),
@@ -31,6 +42,17 @@ VOICES: dict[str, dict[str, tuple[str, str, float, float]]] = {
         "M": ("slt", "en-us", 1.05, 1.0),
         "P": ("bdl", "en-us", 0.95, 1.18),
         "B": ("bdl", "en-us", 0.74, 0.93),
+        "G": ("bdl", "en-us", 1.6, 1.12),
+        "L": ("slt", "en-us", 1.1, 1.02),
+        "T": ("bdl", "en-us", 0.86, 1.22),
+        "K": ("clb", "en-us", 1.28, 1.05),
+        "C": ("bdl", "en-us", 0.8, 0.9),
+        "O": ("bdl", "en-us", 0.9, 1.12),
+        "D": ("bdl", "en-us", 1.05, 0.95),
+        "H": ("bdl", "en-us", 1.2, 1.15),
+        "X1": ("bdl", "en-us", 1.0, 1.0),
+        "X2": ("slt", "en-us", 0.9, 0.95),
+        "X3": ("bdl", "en-us", 1.08, 1.1),
     },
 }
 
@@ -107,6 +129,8 @@ def _ffmpeg_fx(src: str, pitch: float, tempo: float) -> np.ndarray:
 def synth(text: str, lang: str, speaker: str) -> np.ndarray:
     """Synthesize one line for a speaker; returns float32 mono at SR."""
     rv, ev, pitch, tempo = VOICES[lang][speaker]
+    if not any(ch.isalpha() for ch in text):
+        return np.zeros(int(1.2 * SR), np.float32)
     with tempfile.TemporaryDirectory() as tmp:
         path = os.path.join(tmp, "v.wav")
         wav = _rhvoice(text, rv)
@@ -123,5 +147,7 @@ def synth(text: str, lang: str, speaker: str) -> np.ndarray:
                 w.setframerate(sr)
                 w.writeframes(arr.astype(np.int16).tobytes())
         audio = _ffmpeg_fx(path, pitch, tempo)
+    if audio.size == 0:
+        return np.zeros(int(0.5 * SR), np.float32)
     peak = float(np.max(np.abs(audio))) or 1.0
     return audio / peak * 0.9

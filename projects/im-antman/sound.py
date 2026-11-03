@@ -30,21 +30,32 @@ def _hz(n: int) -> float:
     return 440.0 * 2 ** ((n - 69) / 12)
 
 
-@lru_cache(maxsize=4)
+@lru_cache(maxsize=8)
 def music(style: str) -> np.ndarray:
     """Looping 8-bar backing track: 'happy' (C major bounce) or 'villain' (minor tuba march)."""
-    bpm = 132 if style == "happy" else 112
+    styles = {
+        "happy": (132, [(48, [60, 64, 67]), (43, [59, 62, 67]), (45, [57, 60, 64]), (41, [57, 60, 65])],
+                  [72, 76, 79, 76, 74, 71, 74, 79, 72, 76, 81, 79, 77, 76, 74, 72,
+                   72, 76, 79, 84, 83, 79, 74, 71, 69, 72, 76, 72, 77, 74, 72, 0], "square"),
+        "villain": (112, [(45, [57, 60, 64]), (41, [57, 60, 65]), (40, [56, 59, 64]), (45, [57, 60, 64])],
+                    [69, 0, 72, 69, 68, 0, 71, 68, 69, 0, 76, 74, 72, 71, 69, 68,
+                     69, 0, 72, 69, 65, 0, 69, 65, 64, 68, 71, 74, 76, 0, 69, 0], "tri"),
+        "sad": (76, [(45, [57, 60, 64]), (41, [57, 60, 65]), (48, [55, 60, 64]), (43, [55, 59, 62])],
+                [76, 0, 74, 72, 74, 0, 72, 69, 72, 0, 71, 67, 71, 0, 0, 0,
+                 69, 0, 72, 76, 77, 76, 74, 72, 71, 0, 67, 69, 71, 0, 0, 0], "sine"),
+        "action": (156, [(40, [52, 55, 59]), (40, [52, 55, 59]), (43, [55, 59, 62]), (45, [57, 60, 64])],
+                   [64, 64, 67, 64, 71, 69, 67, 64, 64, 64, 67, 64, 72, 71, 69, 67,
+                    64, 67, 71, 76, 74, 71, 67, 71, 69, 72, 76, 72, 71, 67, 64, 0], "square"),
+        "romance": (88, [(48, [60, 64, 67]), (45, [57, 60, 64]), (41, [57, 60, 65]), (43, [55, 59, 62])],
+                    [79, 0, 76, 77, 79, 0, 72, 0, 77, 0, 74, 76, 77, 0, 0, 0,
+                     76, 0, 72, 74, 76, 0, 69, 0, 74, 0, 71, 72, 74, 0, 0, 0], "sine"),
+        "lair": (96, [(38, [50, 53, 57]), (39, [51, 55, 58]), (38, [50, 53, 57]), (37, [49, 53, 56])],
+                 [62, 0, 63, 0, 62, 0, 58, 0, 62, 0, 63, 65, 66, 0, 0, 0,
+                  62, 0, 63, 0, 62, 0, 57, 0, 56, 0, 57, 0, 50, 0, 0, 0], "tri"),
+    }
+    bpm, chords, melody, lead = styles.get(style, styles["happy"])
+    chords = chords * 2
     beat = 60 / bpm
-    if style == "happy":
-        chords = [(48, [60, 64, 67]), (43, [59, 62, 67]), (45, [57, 60, 64]), (41, [57, 60, 65])] * 2
-        melody = [72, 76, 79, 76, 74, 71, 74, 79, 72, 76, 81, 79, 77, 76, 74, 72,
-                  72, 76, 79, 84, 83, 79, 74, 71, 69, 72, 76, 72, 77, 74, 72, 0]
-        lead = "square"
-    else:
-        chords = [(45, [57, 60, 64]), (41, [57, 60, 65]), (40, [56, 59, 64]), (45, [57, 60, 64])] * 2
-        melody = [69, 0, 72, 69, 68, 0, 71, 68, 69, 0, 76, 74, 72, 71, 69, 68,
-                  69, 0, 72, 69, 65, 0, 69, 65, 64, 68, 71, 74, 76, 0, 69, 0]
-        lead = "tri"
     bar = beat * 4
     total = int(bar * len(chords) * SR)
     out = np.zeros(total, np.float32)
@@ -135,4 +146,37 @@ def sfx(name: str) -> np.ndarray:
         t = _t(3.0)
         f = np.where((t * 2) % 1 < 0.5, 700, 950)
         return (np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.35 * np.minimum(1, (3 - t) / 0.5)).astype(np.float32)
+    if name == "whoosh":
+        t = _t(0.6)
+        n = _noise(0.6, 11)
+        k = np.sin(np.pi * t / 0.6)
+        return (_lowpass(n, 3) * k * 0.8).astype(np.float32)
+    if name == "zap":
+        t = _t(0.5)
+        f = 1800 - 2600 * t
+        return (np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * np.exp(-t * 5) * 0.4).astype(np.float32)
+    if name == "pop":
+        t = _t(0.2)
+        return (np.sin(2 * np.pi * (400 + 1600 * t) * t) * np.exp(-t * 25)).astype(np.float32)
+    if name == "ding":
+        t = _t(1.2)
+        return ((np.sin(2 * np.pi * 1318 * t) + 0.5 * np.sin(2 * np.pi * 2637 * t)) * np.exp(-t * 3) * 0.5).astype(np.float32)
+    if name == "boom":
+        t = _t(1.5)
+        return (_lowpass(_noise(1.5, 13), 30) * 6 * np.exp(-t * 2.5) + np.sin(2 * np.pi * 50 * t) * np.exp(-t * 3)).astype(np.float32)
+    if name == "bzz":
+        t = _t(1.5)
+        f = 520 + 40 * np.sin(2 * np.pi * 7 * t)
+        return (np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.18 * np.minimum(1, (1.5 - t) / 0.3)).astype(np.float32)
+    if name == "cheer":
+        t = _t(2.5)
+        n = _lowpass(_noise(2.5, 17), 12) * 4
+        claps = (np.random.default_rng(3).random(len(t)) > 0.9993).astype(np.float32)
+        claps = np.convolve(claps, np.exp(-np.arange(400) / 60), mode="same")
+        return ((n * 0.5 + claps * 0.6) * np.minimum(1, t / 0.3) * np.minimum(1, (2.5 - t) / 0.6)).astype(np.float32)
+    if name == "dart":
+        return (sfx("whoosh")[: int(0.3 * SR)] + np.pad(sfx("pop"), (int(0.25 * SR), 0))[: int(0.3 * SR)]).astype(np.float32)
+    if name == "ouch":
+        t = _t(0.5)
+        return (np.sin(2 * np.pi * (600 - 500 * t) * t) * np.exp(-t * 6) * 0.6).astype(np.float32)
     return np.zeros(100, np.float32)

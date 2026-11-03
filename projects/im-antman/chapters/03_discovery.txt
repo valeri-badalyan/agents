@@ -1,0 +1,62 @@
+@ card | Глава 3. Говорящий муравей | Chapter 3. The Talking Ant
+
+@ kitchen happy | A=640 |
+N | Утро. Антон проснулся бодрым, как никогда в жизни. Он даже не опоздал. Это было первое чудо. | Morning. Anton woke up more refreshed than ever in his life. He wasn't even late. That was the first miracle. | A^
+A | Какой прекрасный день! Сейчас сделаю бутерброд. Огромный. Королевский бутерброд! | What a beautiful day! I'll make a sandwich. A huge one. A royal sandwich! | A:up notes@A
+A | Режем хлеб... аккуратно... ай! | Cutting the bread... carefully... ouch! | sfx=ouch A! fx=oops@A
+A | Порезался. Ну конечно. Где пластырь... Стоп. А где порез? | I cut myself. Of course. Where's the bandage... Wait. Where did the cut go? | A* sfx_end=heal
+A | Он был. Я точно видел. Тут была кровь. Теперь ничего. Палец как новенький. Даже лучше! | It was there. I saw it. There was blood. Now nothing. My finger is like new. Even better! | A:point
+A | Ладно. Проверим. Сковородка горячая... только кончиком пальца... | Okay. Let's test it. The pan is hot... just the tip of my finger... | A>780
+~ 1 | | | sfx=pshh fx=pshh@A A!
+A | Ай-ай-ай! Горячо! Горячо! Ой. Уже не горячо. Уже зажило. | Ow, ow, ow! Hot! Hot! Oh. Not hot anymore. Already healed. | A^ A* sfx_end=heal
+A | Я... я заживаю. Мгновенно. Как в той жидкости. Регенерин! | I... I heal. Instantly. Like that liquid. Regenerin! | A:up
+G | Поздравляю. Дошло наконец. Я думал, ты до обеда будешь соображать. | Congratulations. It finally clicked. I thought you'd need until lunch. | G=900 G:show G^
+A | А-а-а! Муравей! Говорящий муравей! На моём столе! | Aaah! An ant! A talking ant! On my table! | A^^ fx=aaa@A sfx=whoosh
+G | Не кричи. У меня очень чувствительные усики. И я не «муравей». Я Гоша. | Stop yelling. My antennae are very sensitive. And I'm not just an ant. I'm Gosha. | G:wave
+A | Гоша? Тот самый номер сорок семь? Из банки? | Gosha? The number forty-seven? From the jar? |
+G | Бывший номер сорок семь. Я тоже упал в регенерин. Только у меня отросло не тело, а мозги. Теперь я умный. И говорю на трёх языках. | Former number forty-seven. I fell into the Regenerin too. But instead of my body, my brain grew. Now I'm smart. And I speak three languages. | G>860
+A | На трёх? | Three? |
+G | Русский, английский и муравьиный. Муравьиный самый сложный. Там сорок слов означают «сахар». | Russian, English and Ant. Ant is the hardest one. It has forty words for sugar. |
+A | Так. Мне нужно сесть. Или лечь. Или позвонить маме. | Okay. I need to sit down. Or lie down. Or call my mom. | A:cross
+M | Антоша, это мама! Ты почему такой бледный голос? | Tony, it's Mom! Why does your voice sound so pale? |
+A | Мама, привет. Слушай. Если бы я заживал мгновенно, а у меня на кухне жил говорящий муравей... ты бы удивилась? | Hi, Mom. Listen. If I healed instantly and a talking ant lived in my kitchen... would you be surprised? |
+M | Я бы удивилась, что ты наконец помыл кухню. Муравьи заводятся там, где крошки! | I'd be surprised you finally cleaned the kitchen. Ants show up wherever there are crumbs! |
+G | Оскорбительно. Но справедливо. | Offensive. But fair. | G:cross
+A | Мам, я перезвоню! | Mom, I'll call you back! |
+G | Слушай, Антон. Нам надо понять, на что ты теперь способен. Научно. С экспериментами. | Listen, Anton. We need to find out what you can do now. Scientifically. With experiments. | G:point
+A | С какими ещё экспериментами? | What kind of experiments? |
+G | С больными. То есть с болезненными. Не бойся. Ты же всё равно заживёшь. | Painful ones. Don't worry. You'll heal anyway. | G^
+
+@ street happy | A=300, G=420 |
+N | Эксперимент номер один. Лестница. | Experiment number one. The stairs. | cap={ЭКСПЕРИМЕНТ №1|EXPERIMENT #1}
+G | Просто иди как обычно. Ты всё равно споткнёшься. Это у тебя талант. | Just walk normally. You'll trip anyway. It's your talent. |
+A | Я не специально! | I don't do it on purpose! | A>600
+~ 1.5 | | | A^^ A>800 sfx=whoosh
+~ 1 | | | A_ fx=crack@A sfx=trip shake
+A | Ой... кажется, я сломал... всё. | Ow... I think I broke... everything. |
+~ 1.5 | | | A~ A* sfx=heal,boing
+A | А нет. Ничего не сломал. Всё срослось! Даже коленка, которая с детства хрустела! | Never mind. Nothing's broken. It all grew back! Even my knee that's been crunching since I was a kid! | A^ A:up
+G | Эксперимент номер один: успех. Записываю. Ой, у меня нет ручки. И рук нормальных тоже нет. | Experiment number one: success. Writing it down. Oops, I don't have a pen. Or proper hands. | G:wave
+N | Эксперимент номер два. Велосипедист. Случайный. | Experiment number two. A cyclist. An accidental one. | cap={ЭКСПЕРИМЕНТ №2|EXPERIMENT #2}
+~ 1.2 | | | sfx=whoosh,ding fx=bonk@A A_ shake
+A | Я в порядке! Я в полном порядке! Вы тоже? Отлично! Хорошего дня! | I'm okay! I'm totally okay! You too? Great! Have a nice day! | A~ A* sfx=boing
+G | Эксперимент номер два: успех. Велосипедист, кстати, в шоке. | Experiment number two: success. The cyclist, by the way, is in shock. |
+N | Эксперимент номер три. Комар. | Experiment number three. A mosquito. | cap={ЭКСПЕРИМЕНТ №3|EXPERIMENT #3} sfx=bzz
+A | Он меня укусил! Сейчас будет чесаться три дня... А нет. Уже не чешется. Ха! Съел, комар? | It bit me! Now it'll itch for three days... Nope. Doesn't itch already. Ha! How do you like that, mosquito? | A! A*
+G | Запомни этот день, Антон. Комары больше никогда не будут тебе страшны. | Remember this day, Anton. Mosquitoes will never scare you again. |
+N | Тогда никто ещё не знал, что очень скоро Антону встретится очень большой комар. Точнее — комариха. | Back then, nobody knew that very soon Anton would meet a very big mosquito. Or rather, a lady mosquito. | sfx=bzz
+
+@ hospital happy | D=900, A=400, G=520 |
+N | Для надёжности Антон пошёл к врачу. | Just to be safe, Anton went to see a doctor. |
+D | Так-так. Жалобы есть? | Well, well. Any complaints? |
+A | Доктор, у меня наоборот. Я выздоравливаю. Слишком быстро. | Doctor, it's the opposite. I get better. Too fast. |
+D | Слишком быстро выздоравливаете? Молодой человек, у меня тут очередь из людей, которые выздоравливают слишком медленно. | Too fast? Young man, I have a line of people out there who get better too slowly. | D:cross
+D | Ладно, давайте рентген. Не двигайтесь. | Fine, let's do an X-ray. Hold still. | flash sfx=zap
+D | Интересно. Очень интересно. Ваши кости... новые. Как с завода. Даже бирки нет. | Interesting. Very interesting. Your bones are... new. Factory fresh. They don't even have a tag. | D:point
+A | Это хорошо или плохо? | Is that good or bad? |
+D | Это... я не знаю. Я врач тридцать лет. Впервые не знаю. Можно я пойду полежу? | It's... I don't know. I've been a doctor for thirty years. First time I don't know. Can I go lie down? | D! sweat@D
+G | А мне можно рентген? Я тоже хочу посмотреть на свои кости. | Can I get an X-ray too? I want to see my bones. | G^
+D | Муравей... говорит... | The ant... is talking... | D_ fx=bonk@D sfx=trip
+A | Доктор? Доктор! Он в обмороке. Гоша, ну зачем? | Doctor? Doctor! He fainted. Gosha, why? |
+G | Он первый начал. Сказал, что у муравьёв нет костей. Это правда, но всё равно обидно. | He started it. Said ants don't have bones. That's true, but it still hurts. | G:cross
+~ 1.5 | | | D~ sfx=boing
