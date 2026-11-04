@@ -320,7 +320,26 @@ def make(lang: str, out_dir: str, workers: int) -> str:
                     "-metadata", f"title={title}", out], check=True)
     for s in segs + [lst, apath]:
         os.remove(s)
+    prepend_intro(out)
     return out
+
+
+INTRO = os.path.join(HERE, "assets", "intro_v3.mp4")
+
+
+def prepend_intro(path: str) -> None:
+    """Put the V3 ORIGINAL studio intro in front of the film (re-encodes)."""
+    if not os.path.exists(INTRO):
+        return
+    tmp = path + ".tmp.mp4"
+    fc = ("[0:v]scale=1280:720,fps=24,setsar=1,format=yuv420p[v0];[1:v]fps=24,setsar=1,format=yuv420p[v1];"
+          "[0:a]aresample=48000,aformat=channel_layouts=stereo[a0];[1:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
+          "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]")
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", INTRO, "-i", path, "-filter_complex", fc,
+                    "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation",
+                    "-crf", "29", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", "-map_metadata", "1", tmp],
+                   check=True)
+    os.replace(tmp, path)
 
 
 def sheet(lang: str, path: str, only: int | None) -> None:
