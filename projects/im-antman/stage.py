@@ -90,7 +90,7 @@ def parse(text: str) -> list[Scene]:
         if line.startswith("@"):
             parts = [p.strip() for p in line[1:].split("|")]
             head = parts[0].split()
-            if head[0] in ("card", "title", "credits"):
+            if head[0] in ("card", "title", "credits", "presents"):
                 sc = Scene(head[0], head[1] if len(head) > 1 else "happy", {}, set())
                 sc.title = (parts[1] if len(parts) > 1 else "", parts[2] if len(parts) > 2 else "")
             else:
@@ -129,7 +129,7 @@ def layout(scenes: list[Scene], card_dur: float = 4.5) -> float:
     t = 0.0
     for sc in scenes:
         sc.start = t
-        if sc.bg in ("card", "title") and not sc.lines:
+        if sc.bg in ("card", "title", "presents") and not sc.lines:
             sc.dur = card_dur if sc.bg == "card" else 7.0
         elif sc.bg == "credits":
             sc.dur = 40.0

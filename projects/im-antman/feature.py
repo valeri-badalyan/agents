@@ -208,6 +208,15 @@ def render_card(img: Image.Image, sc: ST.Scene, t: float, lang: str) -> None:
         C.ant(d, 1220, 700, 0.7, wave=1.0)
         return
     title = sc.title[0] if lang == "ru" else sc.title[1]
+    if sc.bg == "presents":
+        k = min(1.0, t / 1.2)
+        glow = int(60 + 40 * math.sin(t * 3))
+        D.text_center(d, 640, 300, "V3", int(60 + 110 * k), (255, 200 + glow // 3, 90), 8, (90, 50, 10))
+        D.text_center(d, 640, 430, "ORIGINAL", int(20 + 40 * k), (255, 215, 140), 3, (90, 50, 10))
+        if t > 1.0:
+            sub = "представляет" if lang == "ru" else "presents"
+            D.text_center(d, 640, 520, sub, int(20 + 18 * min(1.0, (t - 1.0) / 0.6)), (240, 240, 240), 2)
+        return
     if sc.bg == "title":
         z = min(1.0, t / 2.0)
         D.hero(d, 640, 700, 0.5 + 0.8 * z, arms=(150, 150))
@@ -235,7 +244,7 @@ def frame(gt: float, lang: str) -> Image.Image:
     for ln in sc.lines:
         if t >= ln.start:
             cur = ln
-    if sc.bg in ("card", "title", "credits"):
+    if sc.bg in ("card", "title", "credits", "presents"):
         img = ST.background("card", lang).copy()
         render_card(img, sc, t, lang)
     else:

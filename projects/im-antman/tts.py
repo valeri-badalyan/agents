@@ -57,6 +57,13 @@ VOICES: dict[str, dict[str, tuple[str, str, float, float]]] = {
 }
 
 
+# how to pronounce things the engine reads badly
+SAY: dict[str, dict[str, str]] = {
+    "ru": {"V3 ORIGINAL": "Ви Три Ориджинал"},
+    "en": {"V3 ORIGINAL": "V Three Original"},
+}
+
+
 def _rhvoice(text: str, voice: str) -> bytes | None:
     try:
         from rhvoice_wrapper import TTS  # type: ignore
@@ -129,6 +136,8 @@ def _ffmpeg_fx(src: str, pitch: float, tempo: float) -> np.ndarray:
 def synth(text: str, lang: str, speaker: str) -> np.ndarray:
     """Synthesize one line for a speaker; returns float32 mono at SR."""
     rv, ev, pitch, tempo = VOICES[lang][speaker]
+    for a, b in SAY.get(lang, {}).items():
+        text = text.replace(a, b)
     if not any(ch.isalpha() for ch in text):
         return np.zeros(int(1.2 * SR), np.float32)
     with tempfile.TemporaryDirectory() as tmp:

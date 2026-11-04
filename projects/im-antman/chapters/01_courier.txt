@@ -1,5 +1,8 @@
+@ presents happy | V3 ORIGINAL | V3 ORIGINAL
+N | V3 ORIGINAL представляет | V3 ORIGINAL presents | sfx=ding
+
 @ title happy | Полнометражная комедия · 12+ | A feature comedy · 12+
-N | Студия «Муравейник» представляет. Полнометражная комедия. «Я Энтмен!» | Anthill Studios presents. A feature comedy. I'm Antman! | sfx=fanfare
+N | Полнометражная комедия. «Я Энтмен!» | A feature comedy. I'm Antman! | sfx=fanfare
 
 @ card | Глава 1. Курьер | Chapter 1. The Courier
 
