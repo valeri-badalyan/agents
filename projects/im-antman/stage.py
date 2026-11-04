@@ -132,7 +132,7 @@ def layout(scenes: list[Scene], card_dur: float = 4.5) -> float:
         if sc.bg in ("card", "title", "presents") and not sc.lines:
             sc.dur = card_dur if sc.bg == "card" else 7.0
         elif sc.bg == "credits":
-            sc.dur = 40.0
+            sc.dur = 120.0
         else:
             lt = PRE
             for ln in sc.lines:

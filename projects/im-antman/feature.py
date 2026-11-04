@@ -197,15 +197,8 @@ def render_card(img: Image.Image, sc: ST.Scene, t: float, lang: str) -> None:
         b = int(140 + 100 * math.sin(t * 3 + i))
         d.ellipse([x - 2, y - 2, x + 2, y + 2], fill=(b, b, b))
     if sc.bg == "credits":
-        rows = CREDITS[lang]
-        off = D.H + 40 - t / sc.dur * (D.H + 120 + len(rows) * 58)
-        for i, row in enumerate(rows):
-            y = off + i * 58
-            if -40 < y < D.H + 40:
-                D.text_center(d, 640, y, row, 54 if i == 0 else 32, D.GOLD if i in (0, 3, 12) else (240, 240, 240), 3)
-        D.hero(d, 1140, 700, 0.55, arms=(20 + 20 * math.sin(t * 4), 150 + 20 * math.sin(t * 6)))
-        import cast as C
-        C.ant(d, 1220, 700, 0.7, wave=1.0)
+        import credits as CR
+        CR.render(d, t, sc.dur, lang)
         return
     title = sc.title[0] if lang == "ru" else sc.title[1]
     if sc.bg == "presents":
